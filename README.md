@@ -12,6 +12,9 @@ Stránka jen pro čtení, která návštěvníkům webu ukazuje volnou kapacitu 
 
 Jedna instance slouží jednomu účtu (merchantovi). Co přesně stránka dělá, popisuje [specifikace](docs/SPEC.md).
 
+
+[![Ukázka aplikace](https://img.youtube.com/vi/krZdvYJfos4/maxresdefault.jpg)](https://www.youtube.com/watch?v=krZdvYJfos4)
+
 ## Instalace na server
 
 Návod pro IIS je v [docs/instalace-iis.md](docs/instalace-iis.md): publikace, HTTPS, připojení účtu, povolené domény pro iframe a aktualizace.
