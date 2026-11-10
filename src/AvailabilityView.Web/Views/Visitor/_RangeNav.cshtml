@@ -1,0 +1,21 @@
+@model RangeNav
+
+<nav class="av-nav" aria-label="@Text[$"Visitor.{Model.Unit}.Navigation"]">
+    @if (Model.PreviousUrl is { } previous)
+    {
+        <a class="av-nav__link" href="@previous">‹ @Text[$"Visitor.{Model.Unit}.Previous"]</a>
+    }
+    else
+    {
+        <span class="av-nav__link av-nav__link--disabled">‹ @Text[$"Visitor.{Model.Unit}.Previous"]</span>
+    }
+    <span class="av-nav__title">@Model.Title</span>
+    @if (Model.NextUrl is { } next)
+    {
+        <a class="av-nav__link" href="@next">@Text[$"Visitor.{Model.Unit}.Next"] ›</a>
+    }
+    else
+    {
+        <span class="av-nav__link av-nav__link--disabled">@Text[$"Visitor.{Model.Unit}.Next"] ›</span>
+    }
+</nav>

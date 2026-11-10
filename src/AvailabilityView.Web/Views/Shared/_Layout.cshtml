@@ -1,0 +1,26 @@
+@using System.Globalization
+@using Microsoft.Extensions.Options
+@inject IOptions<EmbeddingOptions> Embedding
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Text["Page.Title"]</title>
+    <link rel="stylesheet" href="~/css/availability.css">
+    @* Za styly aplikace, aby je merchant mohl přepsat. Jen na stránce návštěvníka, ne na 429 z průvodce. *@
+    @if (VisitorPageAttribute.Applies(Context) && Embedding.Value.Style() is { } style)
+    {
+        <link rel="stylesheet" href="@style.Href(Context.Request.PathBase)">
+    }
+</head>
+<body class="av-page">
+    @* Název oblasti: web merchanta má obvykle vlastní main a čtečka by je jinak nerozlišila (axe landmark-unique). *@
+    <main class="av-root" aria-labelledby="av-title">
+        @* Nadpis jen pro čtečky: stránka je vložená do webu merchanta, který má vlastní nadpis. Dny jsou h2. *@
+        <h1 class="av-visually-hidden" id="av-title">@Text["Page.Title"]</h1>
+        @RenderBody()
+    </main>
+    <script type="module" src="~/js/availability.js" nonce="@SecurityHeadersMiddleware.NonceOf(Context)"></script>
+</body>
+</html>

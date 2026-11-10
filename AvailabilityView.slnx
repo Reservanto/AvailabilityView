@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AvailabilityView.Application/AvailabilityView.Application.csproj" />
+    <Project Path="src/AvailabilityView.Infrastructure/AvailabilityView.Infrastructure.csproj" />
+    <Project Path="src/AvailabilityView.Web/AvailabilityView.Web.csproj" />
+    <Project Path="src/Reservanto.ApiClient/Reservanto.ApiClient.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AvailabilityView.Application.Tests/AvailabilityView.Application.Tests.csproj" />
+    <Project Path="tests/AvailabilityView.Architecture.Tests/AvailabilityView.Architecture.Tests.csproj" />
+    <Project Path="tests/AvailabilityView.Infrastructure.Tests/AvailabilityView.Infrastructure.Tests.csproj" />
+    <Project Path="tests/AvailabilityView.Repository.Tests/AvailabilityView.Repository.Tests.csproj" />
+    <Project Path="tests/AvailabilityView.Web.E2E.Tests/AvailabilityView.Web.E2E.Tests.csproj" />
+    <Project Path="tests/AvailabilityView.Web.Tests/AvailabilityView.Web.Tests.csproj" />
+    <Project Path="tests/Reservanto.ApiClient.Tests/Reservanto.ApiClient.Tests.csproj" />
+  </Folder>
+</Solution>

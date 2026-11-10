@@ -1,0 +1,28 @@
+# Sestavení
+bin/
+obj/
+artifacts/
+TestResults/
+.vs/
+*.user
+
+# Výstup překladu SCSS a TypeScriptu
+src/AvailabilityView.Web/wwwroot/css/
+src/AvailabilityView.Web/wwwroot/js/
+
+# Nástroje
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# Tajné údaje: produkční konfigurace patří jen na server
+appsettings.Production.json
+appsettings.*.local.json
+
+# Claude Code
+.claude/settings.local.json
+.claude/.last-green
+
+# Soukromé místní soubory, do veřejného repozitáře nepatří
+.private/

@@ -1,0 +1,75 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:10.3853652+01:00",
+  "endpoint": "WorkingHours/GetForPeriod",
+  "scenario": "resource-11293",
+  "request": {
+    "BookingResourceId": 11293,
+    "LocationId": null,
+    "IntervalEnd": 1795392000,
+    "IntervalStart": 1794182400,
+    "Page": 1,
+    "PageSize": 100,
+    "TimeStamp": 1794231670
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "BookingResourceId": 11293,
+      "LocationId": null,
+      "Items": [
+        {
+          "DayOfWeek": 1,
+          "Start": 1794211200,
+          "End": 1794240000
+        },
+        {
+          "DayOfWeek": 2,
+          "Start": 1794297600,
+          "End": 1794326400
+        },
+        {
+          "DayOfWeek": 3,
+          "Start": 1794384000,
+          "End": 1794412800
+        },
+        {
+          "DayOfWeek": 4,
+          "Start": 1794474000,
+          "End": 1794495600
+        },
+        {
+          "DayOfWeek": 5,
+          "Start": 1794556800,
+          "End": 1794585600
+        },
+        {
+          "DayOfWeek": 1,
+          "Start": 1794816000,
+          "End": 1794844800
+        },
+        {
+          "DayOfWeek": 3,
+          "Start": 1794988800,
+          "End": 1795017600
+        },
+        {
+          "DayOfWeek": 4,
+          "Start": 1795078800,
+          "End": 1795100400
+        },
+        {
+          "DayOfWeek": 5,
+          "Start": 1795161600,
+          "End": 1795190400
+        }
+      ],
+      "IsError": false,
+      "ErrorParameter": null,
+      "ErrorMessage": null,
+      "ErrorParameters": [],
+      "ErrorMessages": []
+    }
+  }
+}

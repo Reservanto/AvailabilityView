@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Kontroly souborů v repozitáři: tajné údaje a pravidla kódu, která neohlídá build. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Shared\RepositoryRoot.cs" Link="Support\RepositoryRoot.cs" />
+    <Compile Include="..\Shared\NeutralNames.cs" Link="Support\NeutralNames.cs" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

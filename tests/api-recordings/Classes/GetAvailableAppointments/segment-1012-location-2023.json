@@ -1,0 +1,28 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:08.3988611+01:00",
+  "endpoint": "Classes/GetAvailableAppointments",
+  "scenario": "segment-1012-location-2023",
+  "request": {
+    "CalendarId": null,
+    "LocationId": 2023,
+    "SegmentId": 1012,
+    "IntervalEnd": 1799366400,
+    "IntervalStart": 1794182400,
+    "Page": 1,
+    "PageSize": 100,
+    "TimeStamp": 1794231669
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "Items": [],
+      "IsError": false,
+      "ErrorParameter": null,
+      "ErrorMessage": null,
+      "ErrorParameters": [],
+      "ErrorMessages": []
+    }
+  }
+}

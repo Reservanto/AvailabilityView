@@ -1,0 +1,26 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:08.332382+01:00",
+  "endpoint": "Authorize/GetShortTimeToken",
+  "scenario": "invalid",
+  "request": {
+    "LongTimeToken": "REDACTED",
+    "TimeStamp": 1794231668
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "ShortTimeToken": null,
+      "IsError": true,
+      "ErrorParameter": "LongTimeToken",
+      "ErrorMessage": "Předaný LongTimeToken je (už) neplatný.",
+      "ErrorParameters": [
+        "LongTimeToken"
+      ],
+      "ErrorMessages": [
+        "Předaný LongTimeToken je (už) neplatný."
+      ]
+    }
+  }
+}

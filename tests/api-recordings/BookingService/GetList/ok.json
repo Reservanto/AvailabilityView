@@ -1,0 +1,1485 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:12.4245151+01:00",
+  "endpoint": "BookingService/GetList",
+  "scenario": "ok",
+  "request": {
+    "ModifiedAfter": null,
+    "OnlyPublic": true,
+    "Page": 1,
+    "PageSize": 100,
+    "TimeStamp": 1794231672
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "BookingServices": [
+        {
+          "BookingServiceId": 17584,
+          "Name": "Služba 17584",
+          "Description": "Popis služby 17584",
+          "Duration": 120,
+          "Price": 850.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1011,
+          "SegmentName": "Zaměření 1011",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            11330
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 17584
+        },
+        {
+          "BookingServiceId": 21017,
+          "Name": "Služba 21017",
+          "Description": null,
+          "Duration": 120,
+          "Price": 900.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1015,
+          "SegmentName": "Zaměření 1015",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            2030,
+            10173,
+            11330,
+            20937,
+            30336
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 21017
+        },
+        {
+          "BookingServiceId": 13817,
+          "Name": "Služba 13817",
+          "Description": null,
+          "Duration": 60,
+          "Price": 90.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            16606,
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 13817
+        },
+        {
+          "BookingServiceId": 17583,
+          "Name": "Služba 17583",
+          "Description": "Popis služby 17583",
+          "Duration": 30,
+          "Price": 300.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1011,
+          "SegmentName": "Zaměření 1011",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            11330
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 17583
+        },
+        {
+          "BookingServiceId": 17582,
+          "Name": "Služba 17582",
+          "Description": "Popis služby 17582",
+          "Duration": 60,
+          "Price": 350.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1011,
+          "SegmentName": "Zaměření 1011",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            11330
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 17582
+        },
+        {
+          "BookingServiceId": 2050,
+          "Name": "Služba 2050",
+          "Description": null,
+          "Duration": 30,
+          "Price": 100.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 5,
+          "SegmentName": "Zaměření 5",
+          "CategoryId": 5422,
+          "CategoryName": "Kategorie 5422",
+          "BookingResourceIds": [
+            2030,
+            10173,
+            11330,
+            27901
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 2050
+        },
+        {
+          "BookingServiceId": 15393,
+          "Name": "Služba 15393",
+          "Description": null,
+          "Duration": 120,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            2030,
+            10173,
+            10448,
+            10449,
+            16606,
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 15393
+        },
+        {
+          "BookingServiceId": 19592,
+          "Name": "Služba 19592",
+          "Description": null,
+          "Duration": 60,
+          "Price": 80.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            16606,
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 19592
+        },
+        {
+          "BookingServiceId": 16213,
+          "Name": "Služba 16213",
+          "Description": null,
+          "Duration": 60,
+          "Price": 550.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1015,
+          "SegmentName": "Zaměření 1015",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            2030,
+            10173,
+            11330,
+            13445,
+            30336
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 16213
+        },
+        {
+          "BookingServiceId": 16236,
+          "Name": "Služba 16236",
+          "Description": null,
+          "Duration": 60,
+          "Price": 100.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            16606,
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 16236
+        },
+        {
+          "BookingServiceId": 39347,
+          "Name": "Služba 39347",
+          "Description": null,
+          "Duration": 60,
+          "Price": 111.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1013,
+          "SegmentName": "Zaměření 1013",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            11365
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 39347
+        },
+        {
+          "BookingServiceId": 28201,
+          "Name": "Služba 28201",
+          "Description": "Popis služby 28201",
+          "Duration": 60,
+          "Price": 200.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1018,
+          "SegmentName": "Zaměření 1018",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 28201
+        },
+        {
+          "BookingServiceId": 25164,
+          "Name": "Služba 25164",
+          "Description": null,
+          "Duration": 40,
+          "Price": 590.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1021,
+          "SegmentName": "Zaměření 1021",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13894
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 531.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 25164
+        },
+        {
+          "BookingServiceId": 22835,
+          "Name": "Služba 22835",
+          "Description": null,
+          "Duration": 40,
+          "Price": 590.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 7,
+          "SegmentName": "Zaměření 7",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13025
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 22835
+        },
+        {
+          "BookingServiceId": 52412,
+          "Name": "Služba 52412",
+          "Description": null,
+          "Duration": 30,
+          "Price": 110.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1029,
+          "SegmentName": "Zaměření 1029",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            23196,
+            23197,
+            23198
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 52412
+        },
+        {
+          "BookingServiceId": 55438,
+          "Name": "Služba 55438",
+          "Description": null,
+          "Duration": 10,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 13,
+          "SegmentName": "Zaměření 13",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            24291
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 55438
+        },
+        {
+          "BookingServiceId": 72902,
+          "Name": "Služba 72902",
+          "Description": null,
+          "Duration": 1,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 1033,
+          "SegmentName": "Zaměření 1033",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            14592,
+            14809,
+            30267
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 72902
+        },
+        {
+          "BookingServiceId": 27990,
+          "Name": "Služba 27990",
+          "Description": null,
+          "Duration": 60,
+          "Price": 50.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1015,
+          "SegmentName": "Zaměření 1015",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            30336
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 27990
+        },
+        {
+          "BookingServiceId": 38083,
+          "Name": "Služba 38083",
+          "Description": null,
+          "Duration": 60,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 1012,
+          "SegmentName": "Zaměření 1012",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            6882
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 38083
+        },
+        {
+          "BookingServiceId": 74723,
+          "Name": "Služba 74723",
+          "Description": null,
+          "Duration": 60,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 1,
+          "SegmentName": "Zaměření 1",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            30829
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 74723
+        },
+        {
+          "BookingServiceId": 34417,
+          "Name": "Služba 34417",
+          "Description": "Popis služby 34417",
+          "Duration": 60,
+          "Price": 10.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1011,
+          "SegmentName": "Zaměření 1011",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            11330
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 34417
+        },
+        {
+          "BookingServiceId": 27066,
+          "Name": "Služba 27066",
+          "Description": null,
+          "Duration": 1,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 1019,
+          "SegmentName": "Zaměření 1019",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            14592,
+            14809,
+            30267
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 27066
+        },
+        {
+          "BookingServiceId": 94579,
+          "Name": "Služba 94579",
+          "Description": null,
+          "Duration": 240,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 1031,
+          "SegmentName": "Zaměření 1031",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 94579
+        },
+        {
+          "BookingServiceId": 32587,
+          "Name": "Služba 32587",
+          "Description": null,
+          "Duration": 60,
+          "Price": 200.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            16606,
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 32587
+        },
+        {
+          "BookingServiceId": 15649,
+          "Name": "Služba 15649",
+          "Description": "Popis služby 15649",
+          "Duration": 45,
+          "Price": 360.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 5,
+          "SegmentName": "Zaměření 5",
+          "CategoryId": 5422,
+          "CategoryName": "Kategorie 5422",
+          "BookingResourceIds": [
+            2030,
+            10173,
+            27901
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 15649
+        },
+        {
+          "BookingServiceId": 22836,
+          "Name": "Služba 22836",
+          "Description": null,
+          "Duration": 40,
+          "Price": 900.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 7,
+          "SegmentName": "Zaměření 7",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13025
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 22836
+        },
+        {
+          "BookingServiceId": 58252,
+          "Name": "Služba 58252",
+          "Description": null,
+          "Duration": 60,
+          "Price": 50.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1029,
+          "SegmentName": "Zaměření 1029",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            23196,
+            23197
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 58252
+        },
+        {
+          "BookingServiceId": 38092,
+          "Name": "Služba 38092",
+          "Description": null,
+          "Duration": 1,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 1019,
+          "SegmentName": "Zaměření 1019",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            14592,
+            14809,
+            30267
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 38092
+        },
+        {
+          "BookingServiceId": 32855,
+          "Name": "Služba 32855",
+          "Description": null,
+          "Duration": 60,
+          "Price": 250.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1015,
+          "SegmentName": "Zaměření 1015",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            30336
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 32855
+        },
+        {
+          "BookingServiceId": 34921,
+          "Name": "Služba 34921",
+          "Description": null,
+          "Duration": 60,
+          "Price": 100.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1018,
+          "SegmentName": "Zaměření 1018",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            11330
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 34921
+        },
+        {
+          "BookingServiceId": 4948,
+          "Name": "Služba 4948",
+          "Description": "Popis služby 4948",
+          "Duration": 30,
+          "Price": 20.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 5,
+          "SegmentName": "Zaměření 5",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            2030,
+            10173,
+            11330,
+            27901
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 11,
+              "Name": "Cenová hladina 11",
+              "Price": 15.0,
+              "Id": 11
+            },
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 4948
+        },
+        {
+          "BookingServiceId": 32717,
+          "Name": "Služba 32717",
+          "Description": null,
+          "Duration": 60,
+          "Price": 500.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            10448,
+            10449,
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 32717
+        },
+        {
+          "BookingServiceId": 25165,
+          "Name": "Služba 25165",
+          "Description": null,
+          "Duration": 40,
+          "Price": 1180.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1021,
+          "SegmentName": "Zaměření 1021",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13894
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 25165
+        },
+        {
+          "BookingServiceId": 55439,
+          "Name": "Služba 55439",
+          "Description": null,
+          "Duration": 10,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 13,
+          "SegmentName": "Zaměření 13",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            24291
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 55439
+        },
+        {
+          "BookingServiceId": 22837,
+          "Name": "Služba 22837",
+          "Description": null,
+          "Duration": 40,
+          "Price": 490.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 7,
+          "SegmentName": "Zaměření 7",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13025
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 22837
+        },
+        {
+          "BookingServiceId": 15650,
+          "Name": "Služba 15650",
+          "Description": null,
+          "Duration": 60,
+          "Price": 250.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 5,
+          "SegmentName": "Zaměření 5",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            2030,
+            10173,
+            11330,
+            27901
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 100.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 15650
+        },
+        {
+          "BookingServiceId": 30692,
+          "Name": "Služba 30692",
+          "Description": null,
+          "Duration": 40,
+          "Price": 1000.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1021,
+          "SegmentName": "Zaměření 1021",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13894
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 30692
+        },
+        {
+          "BookingServiceId": 34064,
+          "Name": "Služba 34064",
+          "Description": null,
+          "Duration": 60,
+          "Price": 100.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 34064
+        },
+        {
+          "BookingServiceId": 55440,
+          "Name": "Služba 55440",
+          "Description": null,
+          "Duration": 10,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 13,
+          "SegmentName": "Zaměření 13",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            24291
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 55440
+        },
+        {
+          "BookingServiceId": 33011,
+          "Name": "Služba 33011",
+          "Description": null,
+          "Duration": 45,
+          "Price": 500.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1015,
+          "SegmentName": "Zaměření 1015",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            30336
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 33011
+        },
+        {
+          "BookingServiceId": 22838,
+          "Name": "Služba 22838",
+          "Description": null,
+          "Duration": 40,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 7,
+          "SegmentName": "Zaměření 7",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13025
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 22838
+        },
+        {
+          "BookingServiceId": 33703,
+          "Name": "Služba 33703",
+          "Description": null,
+          "Duration": 80,
+          "Price": 600.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1021,
+          "SegmentName": "Zaměření 1021",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13894
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 33703
+        },
+        {
+          "BookingServiceId": 15651,
+          "Name": "Služba 15651",
+          "Description": null,
+          "Duration": 60,
+          "Price": 470.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 5,
+          "SegmentName": "Zaměření 5",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            2030,
+            10173,
+            27901
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 15651
+        },
+        {
+          "BookingServiceId": 33012,
+          "Name": "Služba 33012",
+          "Description": null,
+          "Duration": 60,
+          "Price": 600.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1015,
+          "SegmentName": "Zaměření 1015",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            30336
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 33012
+        },
+        {
+          "BookingServiceId": 46258,
+          "Name": "Služba 46258",
+          "Description": null,
+          "Duration": 60,
+          "Price": 800.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 1015,
+          "SegmentName": "Zaměření 1015",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            30336
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 46258
+        },
+        {
+          "BookingServiceId": 15652,
+          "Name": "Služba 15652",
+          "Description": null,
+          "Duration": 90,
+          "Price": 600.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 5,
+          "SegmentName": "Zaměření 5",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            2030,
+            10173,
+            11330,
+            27901
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 15652
+        },
+        {
+          "BookingServiceId": 92172,
+          "Name": "Služba 92172",
+          "Description": null,
+          "Duration": 60,
+          "Price": 0.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 92172
+        },
+        {
+          "BookingServiceId": 36959,
+          "Name": "Služba 36959",
+          "Description": null,
+          "Duration": 60,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 1021,
+          "SegmentName": "Zaměření 1021",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13894
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 36959
+        },
+        {
+          "BookingServiceId": 107359,
+          "Name": "Služba 107359",
+          "Description": null,
+          "Duration": 60,
+          "Price": 3000.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            10173,
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 107359
+        },
+        {
+          "BookingServiceId": 15653,
+          "Name": "Služba 15653",
+          "Description": null,
+          "Duration": 120,
+          "Price": 730.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 5,
+          "SegmentName": "Zaměření 5",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            2030,
+            10173,
+            27901
+          ],
+          "AvailablePriceLevels": [
+            {
+              "PriceLevelId": 216,
+              "Name": "Cenová hladina 216",
+              "Price": 0.0,
+              "Id": 216
+            }
+          ],
+          "State": "Public",
+          "Id": 15653
+        },
+        {
+          "BookingServiceId": 103863,
+          "Name": "Služba 103863",
+          "Description": null,
+          "Duration": 70,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 1021,
+          "SegmentName": "Zaměření 1021",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            13894
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 103863
+        },
+        {
+          "BookingServiceId": 34323,
+          "Name": "Služba 34323",
+          "Description": null,
+          "Duration": 30,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 7,
+          "SegmentName": "Zaměření 7",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            6882,
+            6883
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 34323
+        },
+        {
+          "BookingServiceId": 111944,
+          "Name": "Služba 111944",
+          "Description": null,
+          "Duration": 50,
+          "Price": 400.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111944
+        },
+        {
+          "BookingServiceId": 65685,
+          "Name": "Služba 65685",
+          "Description": null,
+          "Duration": 60,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 5,
+          "SegmentName": "Zaměření 5",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            27901
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 65685
+        },
+        {
+          "BookingServiceId": 34324,
+          "Name": "Služba 34324",
+          "Description": null,
+          "Duration": 30,
+          "Price": null,
+          "VatRate": 0.0,
+          "VatRateNullable": null,
+          "SegmentId": 7,
+          "SegmentName": "Zaměření 7",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            6882,
+            6883
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 34324
+        },
+        {
+          "BookingServiceId": 111945,
+          "Name": "Služba 111945",
+          "Description": null,
+          "Duration": 50,
+          "Price": 700.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111945
+        },
+        {
+          "BookingServiceId": 111946,
+          "Name": "Služba 111946",
+          "Description": null,
+          "Duration": 50,
+          "Price": 400.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111946
+        },
+        {
+          "BookingServiceId": 111947,
+          "Name": "Služba 111947",
+          "Description": null,
+          "Duration": 50,
+          "Price": 700.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111947
+        },
+        {
+          "BookingServiceId": 111948,
+          "Name": "Služba 111948",
+          "Description": null,
+          "Duration": 50,
+          "Price": 400.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111948
+        },
+        {
+          "BookingServiceId": 111949,
+          "Name": "Služba 111949",
+          "Description": null,
+          "Duration": 50,
+          "Price": 400.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111949
+        },
+        {
+          "BookingServiceId": 111950,
+          "Name": "Služba 111950",
+          "Description": null,
+          "Duration": 50,
+          "Price": 400.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111950
+        },
+        {
+          "BookingServiceId": 111951,
+          "Name": "Služba 111951",
+          "Description": null,
+          "Duration": 60,
+          "Price": 400.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111951
+        },
+        {
+          "BookingServiceId": 111952,
+          "Name": "Služba 111952",
+          "Description": null,
+          "Duration": 60,
+          "Price": 400.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111952
+        },
+        {
+          "BookingServiceId": 111953,
+          "Name": "Služba 111953",
+          "Description": null,
+          "Duration": 50,
+          "Price": 400.0,
+          "VatRate": 0.21,
+          "VatRateNullable": 0.21,
+          "SegmentId": 6,
+          "SegmentName": "Zaměření 6",
+          "CategoryId": null,
+          "CategoryName": null,
+          "BookingResourceIds": [
+            43121,
+            43122
+          ],
+          "AvailablePriceLevels": [],
+          "State": "Public",
+          "Id": 111953
+        }
+      ],
+      "IsError": false,
+      "ErrorParameter": null,
+      "ErrorMessage": null,
+      "ErrorParameters": [],
+      "ErrorMessages": []
+    }
+  }
+}

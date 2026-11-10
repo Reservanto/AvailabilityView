@@ -1,0 +1,101 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:08.3988611+01:00",
+  "endpoint": "Classes/GetAvailableAppointments",
+  "scenario": "segment-6-location-2023",
+  "request": {
+    "CalendarId": null,
+    "LocationId": 2023,
+    "SegmentId": 6,
+    "IntervalEnd": 1799366400,
+    "IntervalStart": 1794182400,
+    "Page": 1,
+    "PageSize": 100,
+    "TimeStamp": 1794231669
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "Items": [
+        {
+          "BookingUrl": "https://booking.reservanto.cz/Modal?id=1234",
+          "StartDate": 1794475800,
+          "EndDate": 1794483000,
+          "CourseId": null,
+          "CourseName": "",
+          "BookingResourceId": 10448,
+          "BookingResourceName": "Zdroj 10448",
+          "BookingServiceId": 15393,
+          "BookingServiceName": "Služba 15393",
+          "CalendarId": 1234,
+          "CalendarName": "Kalendář 1234",
+          "IsAvailable": false,
+          "Capacity": 3,
+          "OccupiedCapacity": 3,
+          "FormattedAvailability": "obsazeno",
+          "Id": 27032410
+        },
+        {
+          "BookingUrl": "https://booking.reservanto.cz/Modal?id=1234",
+          "StartDate": 1794657600,
+          "EndDate": 1794664800,
+          "CourseId": null,
+          "CourseName": "",
+          "BookingResourceId": 10449,
+          "BookingResourceName": "Zdroj 10449",
+          "BookingServiceId": 15393,
+          "BookingServiceName": "Služba 15393",
+          "CalendarId": 1234,
+          "CalendarName": "Kalendář 1234",
+          "IsAvailable": true,
+          "Capacity": 9,
+          "OccupiedCapacity": 0,
+          "FormattedAvailability": "volno",
+          "Id": 27032402
+        },
+        {
+          "BookingUrl": "https://booking.reservanto.cz/Modal?id=1234",
+          "StartDate": 1795262400,
+          "EndDate": 1795269600,
+          "CourseId": null,
+          "CourseName": "",
+          "BookingResourceId": 10449,
+          "BookingResourceName": "Zdroj 10449",
+          "BookingServiceId": 15393,
+          "BookingServiceName": "Služba 15393",
+          "CalendarId": 1234,
+          "CalendarName": "Kalendář 1234",
+          "IsAvailable": true,
+          "Capacity": 9,
+          "OccupiedCapacity": 0,
+          "FormattedAvailability": "volno",
+          "Id": 27032609
+        },
+        {
+          "BookingUrl": "https://booking.reservanto.cz/Modal?id=1234",
+          "StartDate": 1795867200,
+          "EndDate": 1795874400,
+          "CourseId": null,
+          "CourseName": "",
+          "BookingResourceId": 10449,
+          "BookingResourceName": "Zdroj 10449",
+          "BookingServiceId": 15393,
+          "BookingServiceName": "Služba 15393",
+          "CalendarId": 1234,
+          "CalendarName": "Kalendář 1234",
+          "IsAvailable": true,
+          "Capacity": 9,
+          "OccupiedCapacity": 0,
+          "FormattedAvailability": "volno",
+          "Id": 27036373
+        }
+      ],
+      "IsError": false,
+      "ErrorParameter": null,
+      "ErrorMessage": null,
+      "ErrorParameters": [],
+      "ErrorMessages": []
+    }
+  }
+}

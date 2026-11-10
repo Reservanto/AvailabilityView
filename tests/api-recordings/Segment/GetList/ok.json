@@ -1,0 +1,209 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:12.4245151+01:00",
+  "endpoint": "Segment/GetList",
+  "scenario": "ok",
+  "request": {
+    "OnlyPublic": true,
+    "Page": 1,
+    "PageSize": 100,
+    "TimeStamp": 1794231672
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "Items": [
+        {
+          "SegmentType": "OneToOne",
+          "InternalName": "Consulting",
+          "LocalizedName": "Poradenství",
+          "CustomizedName": "Zaměření 5",
+          "State": "Public",
+          "Id": 5
+        },
+        {
+          "SegmentType": "AutoClasses",
+          "InternalName": "Sauna",
+          "LocalizedName": "Sauna",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 7
+        },
+        {
+          "SegmentType": "OneToOne",
+          "InternalName": "TherapyOld",
+          "LocalizedName": "Terapie (zastaralé)",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1015
+        },
+        {
+          "SegmentType": "Classes",
+          "InternalName": "Sport",
+          "LocalizedName": "Sportoviště",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 6
+        },
+        {
+          "SegmentType": "RestaurantsLike",
+          "InternalName": "Restaurant",
+          "LocalizedName": "Restaurace",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1016
+        },
+        {
+          "SegmentType": "Classes",
+          "InternalName": "GeneralClasses",
+          "LocalizedName": "Obecné - Skupina zákazníků v pevný čas",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1012
+        },
+        {
+          "SegmentType": "SchoolsLike",
+          "InternalName": "Kindergarten",
+          "LocalizedName": "Školka",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1017
+        },
+        {
+          "SegmentType": "AutoClasses",
+          "InternalName": "GeneralAutoClasses",
+          "LocalizedName": "Obecné - Skupina v libovolný čas",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1013
+        },
+        {
+          "SegmentType": "CoursesLike",
+          "InternalName": "Courses",
+          "LocalizedName": "Kurzy",
+          "CustomizedName": "Zaměření 1018",
+          "State": "Public",
+          "Id": 1018
+        },
+        {
+          "SegmentType": "RentalLike",
+          "InternalName": "Rental",
+          "LocalizedName": "Půjčovna",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1019
+        },
+        {
+          "SegmentType": "EmsLike",
+          "InternalName": "Ems",
+          "LocalizedName": "EMS cvičení",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1021
+        },
+        {
+          "SegmentType": "OneToOne",
+          "InternalName": "TechnicalInspection",
+          "LocalizedName": "STK",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1023
+        },
+        {
+          "SegmentType": "AutoClasses",
+          "InternalName": "ClimbingWall",
+          "LocalizedName": "Lezecká stěna",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 8
+        },
+        {
+          "SegmentType": "CoursesLike",
+          "InternalName": "GeneralCourses",
+          "LocalizedName": "Obecné - Události s více termíny",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1024
+        },
+        {
+          "SegmentType": "Classes",
+          "InternalName": "GroupLections",
+          "LocalizedName": "Skupinové lekce",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1028
+        },
+        {
+          "SegmentType": "OneToOne",
+          "InternalName": "EyeClinic",
+          "LocalizedName": "Oční optika",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 23
+        },
+        {
+          "SegmentType": "PlaceRentalLike",
+          "InternalName": "Courts",
+          "LocalizedName": "Kurty",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1029
+        },
+        {
+          "SegmentType": "Classes",
+          "InternalName": "CoursesOld",
+          "LocalizedName": "Kurzy (zastaralé)",
+          "CustomizedName": "Zaměření 13",
+          "State": "Public",
+          "Id": 13
+        },
+        {
+          "SegmentType": "OneToOne",
+          "InternalName": "Veterinary",
+          "LocalizedName": "Veterinární klinika",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1014
+        },
+        {
+          "SegmentType": "PlaceRentalLike",
+          "InternalName": "Bowling",
+          "LocalizedName": "Bowling",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1031
+        },
+        {
+          "SegmentType": "AccommodationLike",
+          "InternalName": "AccommodationBeta",
+          "LocalizedName": "Ubytování / Penziony (připravujeme)",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1033
+        },
+        {
+          "SegmentType": "OneToOne",
+          "InternalName": "Massages",
+          "LocalizedName": "Masáže",
+          "CustomizedName": "Zaměření 1",
+          "State": "Public",
+          "Id": 1
+        },
+        {
+          "SegmentType": "OneToOne",
+          "InternalName": "Therapy",
+          "LocalizedName": "Terapie",
+          "CustomizedName": null,
+          "State": "Public",
+          "Id": 1034
+        }
+      ],
+      "IsError": false,
+      "ErrorParameter": null,
+      "ErrorMessage": null,
+      "ErrorParameters": [],
+      "ErrorMessages": []
+    }
+  }
+}

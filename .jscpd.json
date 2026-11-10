@@ -1,0 +1,8 @@
+{
+  "path": ["src"],
+  "format": ["csharp", "markup", "typescript", "scss"],
+  "ignore": ["**/bin/**", "**/obj/**"],
+  "minLines": 6,
+  "minTokens": 50,
+  "reporters": ["console"]
+}

@@ -1,0 +1,19 @@
+{
+  // TypeScript → wwwroot/js při dotnet build. Cíl a source mapy řídí csproj, MSBuild jimi hodnoty odsud přebíjí.
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "ES2020",
+    "moduleResolution": "bundler",
+    "lib": [ "ES2017", "DOM", "DOM.Iterable" ],
+    "rootDir": "Scripts",
+    "outDir": "wwwroot/js",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true
+  },
+  "include": [ "Scripts/**/*.ts" ]
+}

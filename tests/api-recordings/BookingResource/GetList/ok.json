@@ -1,0 +1,755 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:12.4245151+01:00",
+  "endpoint": "BookingResource/GetList",
+  "scenario": "ok",
+  "request": {
+    "LocationId": null,
+    "OnlyPublic": true,
+    "Page": 1,
+    "PageSize": 100,
+    "TimeStamp": 1794231672
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "Items": [
+        {
+          "BookingResource": 10173,
+          "Email": null,
+          "Phone": "REDACTED",
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            5,
+            6,
+            1015,
+            1018
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 3428,
+          "Name": "Zdroj 10173",
+          "Description": "Popis zdroje 10173",
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            2050,
+            13817,
+            15393,
+            16213,
+            16236,
+            19592,
+            21017,
+            15649,
+            27990,
+            32587,
+            4948,
+            32717,
+            32855,
+            34921,
+            15650,
+            33011,
+            34064,
+            15651,
+            33012,
+            35958,
+            15652,
+            46258,
+            15653,
+            107359,
+            119939
+          ],
+          "Id": 10173
+        },
+        {
+          "BookingResource": 10448,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            6
+          ],
+          "Capacity": 0,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 10448",
+          "Description": null,
+          "MinTimeUnit": 120,
+          "BookingServiceIds": [
+            15393,
+            32717,
+            35958
+          ],
+          "Id": 10448
+        },
+        {
+          "BookingResource": 10449,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            6
+          ],
+          "Capacity": 0,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 10449",
+          "Description": null,
+          "MinTimeUnit": 120,
+          "BookingServiceIds": [
+            15393,
+            32717,
+            35958
+          ],
+          "Id": 10449
+        },
+        {
+          "BookingResource": 2030,
+          "Email": "REDACTED",
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Content/BookingResource/002000/2030/REDACTED.png",
+          "HasCustomImage": true,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            5,
+            6,
+            1015
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 2030",
+          "Description": null,
+          "MinTimeUnit": 30,
+          "BookingServiceIds": [
+            2050,
+            15393,
+            16213,
+            21017,
+            15649,
+            4948,
+            15650,
+            15651,
+            15652,
+            15653,
+            119939
+          ],
+          "Id": 2030
+        },
+        {
+          "BookingResource": 11330,
+          "Email": "REDACTED",
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            5,
+            1011,
+            1015,
+            1018
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 3428,
+          "Name": "Zdroj 11330",
+          "Description": null,
+          "MinTimeUnit": 30,
+          "BookingServiceIds": [
+            2050,
+            16213,
+            17582,
+            17583,
+            17584,
+            21017,
+            34417,
+            4948,
+            34921,
+            15650,
+            15652,
+            119939
+          ],
+          "Id": 11330
+        },
+        {
+          "BookingResource": 6882,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            7,
+            1012
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 6882",
+          "Description": "Popis zdroje 6882",
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            38083,
+            32297,
+            34323,
+            34324
+          ],
+          "Id": 6882
+        },
+        {
+          "BookingResource": 6884,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            7
+          ],
+          "Capacity": 0,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 6884",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [],
+          "Id": 6884
+        },
+        {
+          "BookingResource": 6883,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            7
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 6883",
+          "Description": "Popis zdroje 6883",
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            34323,
+            34324
+          ],
+          "Id": 6883
+        },
+        {
+          "BookingResource": 11293,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            7
+          ],
+          "Capacity": 0,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 11293",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [],
+          "Id": 11293
+        },
+        {
+          "BookingResource": 10494,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            1016
+          ],
+          "Capacity": 0,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 10151,
+          "Name": "Zdroj 10494",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [],
+          "Id": 10494
+        },
+        {
+          "BookingResource": 13445,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            1015
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 13445",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            16213
+          ],
+          "Id": 13445
+        },
+        {
+          "BookingResource": 13894,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            1021
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 13894",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            25164,
+            25165,
+            30692,
+            33703,
+            36959,
+            103863
+          ],
+          "Id": 13894
+        },
+        {
+          "BookingResource": 14592,
+          "Email": "REDACTED",
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [
+            697,
+            2726
+          ],
+          "SegmentIds": [
+            1019
+          ],
+          "Capacity": 50,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 14592",
+          "Description": "Popis zdroje 14592",
+          "MinTimeUnit": 5,
+          "BookingServiceIds": [
+            27066,
+            38092
+          ],
+          "Id": 14592
+        },
+        {
+          "BookingResource": 14809,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [
+            697
+          ],
+          "SegmentIds": [
+            1019
+          ],
+          "Capacity": 100,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 14809",
+          "Description": "Popis zdroje 14809",
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            27066,
+            38092
+          ],
+          "Id": 14809
+        },
+        {
+          "BookingResource": 16606,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            6
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 16606",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            13817,
+            15393,
+            16236,
+            19592,
+            32587
+          ],
+          "Id": 16606
+        },
+        {
+          "BookingResource": 22870,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            1022
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 22870",
+          "Description": null,
+          "MinTimeUnit": 5,
+          "BookingServiceIds": [
+            51513
+          ],
+          "Id": 22870
+        },
+        {
+          "BookingResource": 23196,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            1029
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 23196",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            52412,
+            58252
+          ],
+          "Id": 23196
+        },
+        {
+          "BookingResource": 23197,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            1029
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 23197",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            52412,
+            58252
+          ],
+          "Id": 23197
+        },
+        {
+          "BookingResource": 23198,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            1029
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 23198",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            52412
+          ],
+          "Id": 23198
+        },
+        {
+          "BookingResource": 24291,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            13
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 17362,
+          "Name": "Zdroj 24291",
+          "Description": null,
+          "MinTimeUnit": 10,
+          "BookingServiceIds": [
+            55438,
+            55439,
+            55440
+          ],
+          "Id": 24291
+        },
+        {
+          "BookingResource": 27901,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            5
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 27901",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            2050,
+            15649,
+            4948,
+            15650,
+            15651,
+            15652,
+            15653,
+            65685,
+            65686,
+            119939
+          ],
+          "Id": 27901
+        },
+        {
+          "BookingResource": 30267,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [
+            697
+          ],
+          "SegmentIds": [
+            1033
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 2023,
+          "Name": "Zdroj 30267",
+          "Description": "Popis zdroje 30267",
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            72902
+          ],
+          "Id": 30267
+        },
+        {
+          "BookingResource": 30336,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            1015
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 3428,
+          "Name": "Zdroj 30336",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            16213,
+            21017,
+            27990,
+            32855,
+            33011,
+            33012,
+            46258
+          ],
+          "Id": 30336
+        },
+        {
+          "BookingResource": 30829,
+          "Email": "REDACTED",
+          "Phone": "REDACTED",
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            1
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 20186,
+          "Name": "Zdroj 30829",
+          "Description": null,
+          "MinTimeUnit": 30,
+          "BookingServiceIds": [
+            74723
+          ],
+          "Id": 30829
+        },
+        {
+          "BookingResource": 43121,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            6
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 10151,
+          "Name": "Zdroj 43121",
+          "Description": null,
+          "MinTimeUnit": 60,
+          "BookingServiceIds": [
+            13817,
+            15393,
+            16236,
+            19592,
+            32587,
+            32717,
+            34064,
+            35958,
+            92172,
+            107359,
+            111944,
+            111945,
+            111946,
+            111947,
+            111948,
+            111949,
+            111950,
+            111951,
+            111952,
+            111953
+          ],
+          "Id": 43121
+        },
+        {
+          "BookingResource": 43122,
+          "Email": null,
+          "Phone": null,
+          "ImageUrl": "https://merchant.reservanto.cz/Images/no-avatar.png",
+          "HasCustomImage": false,
+          "State": "Public",
+          "TagIds": [],
+          "SegmentIds": [
+            6
+          ],
+          "Capacity": 1,
+          "AvailableFrom": null,
+          "AvailableTo": null,
+          "LocationId": 10151,
+          "Name": "Zdroj 43122",
+          "Description": null,
+          "MinTimeUnit": 30,
+          "BookingServiceIds": [
+            13817,
+            15393,
+            16236,
+            19592,
+            32587,
+            32717,
+            34064,
+            35958,
+            92172,
+            107359,
+            111944,
+            111945,
+            111946,
+            111947,
+            111948,
+            111949,
+            111950,
+            111951,
+            111952,
+            111953
+          ],
+          "Id": 43122
+        }
+      ],
+      "IsError": false,
+      "ErrorParameter": null,
+      "ErrorMessage": null,
+      "ErrorParameters": [],
+      "ErrorMessages": []
+    }
+  }
+}

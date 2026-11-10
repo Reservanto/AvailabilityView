@@ -1,0 +1,17 @@
+@using System.Globalization
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@(ViewData["Title"] ?? Text["Setup.Title"])</title>
+    <link rel="stylesheet" href="~/css/setup.css">
+</head>
+<body class="av-setup">
+    <main class="av-setup__page" aria-labelledby="av-setup-title">
+        <h1 class="av-setup__title" id="av-setup-title">@(ViewData["Title"] ?? Text["Setup.Title"])</h1>
+        @RenderBody()
+    </main>
+    <script type="module" src="~/js/setup.js" nonce="@SecurityHeadersMiddleware.NonceOf(Context)"></script>
+</body>
+</html>

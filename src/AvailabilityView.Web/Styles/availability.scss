@@ -1,0 +1,725 @@
+// Stránka návštěvníka. Proměnné --av-* a třídy av-* jsou veřejné rozhraní pro vlastní CSS merchantů,
+// popis je v docs/vzhled.md.
+
+.av-page {
+    margin: 0;
+}
+
+.av-root {
+    --av-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --av-font-size: 15px;
+    --av-color-text: #1f2328;
+    --av-color-muted: #5f6672;
+    --av-color-bg: #ffffff;
+    --av-color-surface: #f6f7f9;
+    --av-color-border: #dde1e6;
+    --av-color-accent: #0b6bcb;
+    --av-color-full: #b42318;
+    --av-color-full-bg: #fde8e7;
+    --av-color-free: #1a6b3c;
+    --av-color-free-bg: #e7f3ec;
+    --av-color-busy: #9a3412;
+    --av-color-busy-bg: #fde3d3;
+    --av-color-unavailable-bg: #eceef1;
+    --av-hour-height: 44px;
+    --av-radius: 6px;
+    --av-space-1: 4px;
+    --av-space-2: 8px;
+    --av-space-3: 12px;
+    --av-space-4: 16px;
+    --av-space-5: 24px;
+
+    display: block;
+    padding: var(--av-space-4);
+    font: var(--av-font-size) / 1.45 var(--av-font);
+    color: var(--av-color-text);
+    background: var(--av-color-bg);
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    a {
+        color: var(--av-color-accent);
+    }
+}
+
+.av-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.av-service {
+    margin: 0 0 var(--av-space-3);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.av-message {
+    margin: 0 0 var(--av-space-3);
+    padding: var(--av-space-4);
+    border-radius: var(--av-radius);
+    background: var(--av-color-surface);
+}
+
+.av-message--error {
+    background: var(--av-color-full-bg);
+}
+
+.av-message__action {
+    margin: 0;
+}
+
+.av-agenda__day {
+    margin: 0 0 var(--av-space-5);
+}
+
+.av-agenda__date {
+    margin: 0 0 var(--av-space-2);
+    padding-bottom: var(--av-space-1);
+    border-bottom: 1px solid var(--av-color-border);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.av-agenda__date-today {
+    margin-left: var(--av-space-2);
+    font-size: 0.85em;
+    font-weight: 400;
+    color: var(--av-color-accent);
+}
+
+.av-agenda__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.av-slot {
+    display: grid;
+    grid-template-columns: 7.5em minmax(0, 1fr) auto;
+    gap: var(--av-space-1) var(--av-space-3);
+    align-items: baseline;
+    padding: var(--av-space-2) 0;
+    border-bottom: 1px solid var(--av-color-surface);
+}
+
+.av-slot__time {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.av-slot__service {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.av-slot__resource {
+    display: block;
+    font-size: 0.9em;
+    color: var(--av-color-muted);
+}
+
+.av-slot__occupancy {
+    padding: 1px var(--av-space-2);
+    border-radius: 999px;
+    font-size: 0.85em;
+    white-space: nowrap;
+    color: var(--av-color-free);
+    background: var(--av-color-free-bg);
+}
+
+.av-slot--full {
+    .av-slot__time,
+    .av-slot__service {
+        color: var(--av-color-muted);
+    }
+
+    .av-slot__occupancy {
+        color: var(--av-color-full);
+        background: var(--av-color-full-bg);
+    }
+}
+
+.av-views {
+    margin: 0 0 var(--av-space-4);
+}
+
+.av-views__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--av-space-1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.av-views__link {
+    display: inline-block;
+    padding: var(--av-space-1) var(--av-space-3);
+    border: 1px solid var(--av-color-border);
+    border-radius: var(--av-radius);
+    text-decoration: none;
+
+    &[aria-current="page"] {
+        border-color: var(--av-color-accent);
+        color: var(--av-color-bg);
+        background: var(--av-color-accent);
+    }
+}
+
+.av-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--av-space-2) var(--av-space-3);
+    align-items: flex-end;
+    margin: 0 0 var(--av-space-4);
+}
+
+.av-filters__field {
+    display: flex;
+    flex: 1 1 12em;
+    flex-direction: column;
+    gap: var(--av-space-1);
+    min-width: 0;
+    max-width: 20em;
+}
+
+.av-filters__label {
+    font-size: 0.85em;
+    color: var(--av-color-muted);
+}
+
+.av-filters__select,
+.av-filters__submit {
+    min-height: 2.2em;
+    padding: var(--av-space-1) var(--av-space-2);
+    border: 1px solid var(--av-color-border);
+    border-radius: var(--av-radius);
+    font: inherit;
+}
+
+.av-filters__select {
+    width: 100%;
+    min-width: 0;
+    color: var(--av-color-text);
+    background: var(--av-color-bg);
+}
+
+.av-filters__submit {
+    border-color: var(--av-color-accent);
+    color: var(--av-color-bg);
+    background: var(--av-color-accent);
+    cursor: pointer;
+}
+
+.av-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--av-space-2);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--av-space-3);
+}
+
+.av-nav__title {
+    font-weight: 600;
+    text-align: center;
+}
+
+.av-nav__link {
+    padding: var(--av-space-1) var(--av-space-2);
+    border-radius: var(--av-radius);
+    white-space: nowrap;
+    text-decoration: none;
+
+    &:hover {
+        background: var(--av-color-surface);
+    }
+}
+
+// Bez průhlednosti: ztlumená barva by neměla potřebný kontrast (axe, 2,53:1).
+.av-nav__link--disabled {
+    color: var(--av-color-muted);
+}
+
+.av-calendar__grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--av-space-1);
+}
+
+.av-calendar__day {
+    min-width: 0;
+    min-height: 120px;
+    padding: var(--av-space-2);
+    border-radius: var(--av-radius);
+    background: var(--av-color-surface);
+}
+
+.av-calendar__day--outside {
+    color: var(--av-color-muted);
+    background: repeating-linear-gradient(135deg, var(--av-color-surface) 0 6px, var(--av-color-bg) 6px 12px);
+}
+
+.av-calendar__date {
+    margin: 0 0 var(--av-space-2);
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.av-calendar__day--today .av-calendar__date {
+    color: var(--av-color-accent);
+}
+
+.av-calendar__outside {
+    font-size: 0.8em;
+}
+
+.av-calendar__slots {
+    display: flex;
+    flex-direction: column;
+    gap: var(--av-space-1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.av-calendar__slot {
+    padding: 2px var(--av-space-1);
+    border-left: 3px solid var(--av-color-accent);
+    border-radius: 3px;
+    font-size: 0.8em;
+    overflow-wrap: anywhere;
+    background: var(--av-color-bg);
+
+    > span {
+        display: block;
+    }
+}
+
+.av-calendar__slot--full {
+    border-left-color: var(--av-color-full);
+    color: var(--av-color-muted);
+}
+
+.av-calendar__slot-time {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.av-calendar__slot-meta {
+    color: var(--av-color-muted);
+}
+
+// Hodinová osa. Pozice nesou třídy av-at-N a av-to-N v řádcích po pěti minutách
+// od začátku osy, inline styly CSP nedovolí. Na široké stránce jde čas shora dolů, na úzké zleva doprava.
+$av-rows: 288;
+$av-lanes: 4;
+
+@for $row from 0 through $av-rows {
+    .av-at-#{$row} {
+        --av-at: #{$row + 1};
+    }
+
+    .av-to-#{$row} {
+        --av-to: #{$row + 1};
+    }
+}
+
+@for $lane from 1 through $av-lanes {
+    .av-lanes-#{$lane} {
+        --av-lanes: #{$lane};
+    }
+
+    .av-lane-#{$lane - 1} {
+        --av-lane: #{$lane};
+    }
+}
+
+.av-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--av-space-3);
+    margin: 0 0 var(--av-space-3);
+    padding: 0;
+    font-size: 0.85em;
+    color: var(--av-color-muted);
+    list-style: none;
+}
+
+.av-legend__item::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    vertical-align: -1px;
+    border-radius: 3px;
+}
+
+.av-legend__item--free::before {
+    border: 1px solid var(--av-color-free);
+    background: var(--av-color-free-bg);
+}
+
+.av-legend__item--busy::before {
+    border: 1px solid var(--av-color-busy);
+    background: var(--av-color-busy-bg);
+}
+
+.av-legend__item--unavailable::before {
+    border: 1px solid var(--av-color-border);
+    background: var(--av-color-unavailable-bg);
+}
+
+.av-timegrid__grid {
+    display: grid;
+    grid-template-columns: 3.5em repeat(7, minmax(0, 1fr));
+    gap: 0 var(--av-space-1);
+}
+
+.av-timegrid__day {
+    min-width: 0;
+}
+
+.av-timegrid__date {
+    display: block;
+    min-height: 2.8em;
+    margin: 0;
+    padding-bottom: var(--av-space-1);
+    font-size: 0.85em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.av-timegrid__day--today .av-timegrid__date {
+    color: var(--av-color-accent);
+}
+
+.av-timegrid__day--outside .av-timegrid__date {
+    font-weight: 400;
+    color: var(--av-color-muted);
+}
+
+.av-timegrid__track {
+    display: grid;
+    grid-template-columns: repeat(var(--av-lanes, 1), minmax(0, 1fr));
+    grid-auto-rows: calc(var(--av-hour-height) / 12);
+    border: 1px solid var(--av-color-surface);
+    border-radius: var(--av-radius);
+    background-image: linear-gradient(var(--av-color-surface) 1px, transparent 1px);
+    background-size: 100% var(--av-hour-height);
+
+    > * {
+        grid-row: var(--av-at, 1) / var(--av-to, auto);
+        grid-column: var(--av-lane, 1);
+    }
+}
+
+.av-timegrid__day--outside .av-timegrid__track {
+    background: repeating-linear-gradient(135deg, var(--av-color-surface) 0 6px, var(--av-color-bg) 6px 12px);
+}
+
+.av-timegrid__axis .av-timegrid__track {
+    border-color: transparent;
+    background: none;
+}
+
+// Jen roztáhne osu na celou délku.
+.av-timegrid__size {
+    --av-at: 1;
+}
+
+.av-timegrid__hour {
+    font-size: 0.75em;
+    line-height: 1;
+    text-align: right;
+    color: var(--av-color-muted);
+    transform: translateY(-50%);
+}
+
+.av-block {
+    min-width: 0;
+    margin: 1px;
+    padding: 1px var(--av-space-1);
+    overflow: hidden;
+    border-radius: 4px;
+    font-size: 0.72em;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.av-block--free {
+    border-left: 3px solid var(--av-color-free);
+    color: var(--av-color-free);
+    background: var(--av-color-free-bg);
+}
+
+.av-block--busy {
+    border-left: 3px solid var(--av-color-busy);
+    color: var(--av-color-busy);
+    background: var(--av-color-busy-bg);
+}
+
+.av-block--unavailable {
+    color: var(--av-color-muted);
+    background: var(--av-color-unavailable-bg);
+}
+
+.av-block--lesson {
+    border-left: 3px solid var(--av-color-accent);
+    background: var(--av-color-surface);
+}
+
+.av-block--lesson-full {
+    border-left: 3px solid var(--av-color-full);
+    color: var(--av-color-muted);
+    background: var(--av-color-full-bg);
+}
+
+// Text úseků jde číst v pruzích jen na široké stránce, na úzké je pod pruhem.
+.av-timegrid__list {
+    display: none;
+}
+
+// Na úzké šířce den jako vodorovný pruh, každý den jeden řádek (rozhodnutí uživatele 2026-11-09).
+@media (max-width: 720px) {
+    .av-timegrid__grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--av-space-1);
+    }
+
+    .av-timegrid__axis,
+    .av-timegrid__day {
+        display: grid;
+        grid-template-columns: 5.5em minmax(0, 1fr);
+        align-items: center;
+    }
+
+    .av-timegrid__date {
+        min-height: 0;
+        padding: 0;
+        font-size: 0.8em;
+        text-align: left;
+    }
+
+    .av-timegrid__track {
+        grid-template-rows: repeat(var(--av-lanes, 1), minmax(0, 1fr));
+        grid-template-columns: none;
+        grid-auto-rows: auto;
+        grid-auto-columns: minmax(0, 1fr);
+        height: 34px;
+        background-image: none;
+
+        > * {
+            grid-row: var(--av-lane, 1);
+            grid-column: var(--av-at, 1) / var(--av-to, auto);
+        }
+    }
+
+    .av-timegrid__axis .av-timegrid__track {
+        height: 1.2em;
+    }
+
+    .av-timegrid__hour {
+        text-align: left;
+        transform: translateX(-50%);
+    }
+
+    // Každá druhá hodina, jinak se popisky na úzké šířce slijí. Bez display: none by skrytý popisek na konci osy
+    // přetekl za okraj stránky.
+    .av-timegrid__hour:nth-child(even),
+    .av-timegrid__hour:nth-last-child(2) {
+        display: none;
+    }
+
+    .av-block {
+        margin: 1px 0;
+        padding: 0;
+        border-left-width: 2px;
+    }
+
+    .av-block__text {
+        display: none;
+    }
+
+    .av-timegrid__list {
+        display: flex;
+        flex-wrap: wrap;
+        grid-column: 2;
+        gap: var(--av-space-1);
+        margin: var(--av-space-1) 0 var(--av-space-2);
+        padding: 0;
+        font-size: 0.8em;
+        list-style: none;
+    }
+
+    .av-timegrid__item {
+        padding: 0 var(--av-space-2);
+        border-radius: 4px;
+        background: var(--av-color-surface);
+    }
+
+    .av-timegrid__item--free {
+        color: var(--av-color-free);
+        background: var(--av-color-free-bg);
+    }
+
+    .av-timegrid__item--lesson-full {
+        color: var(--av-color-muted);
+        background: var(--av-color-full-bg);
+    }
+}
+
+// Sedm sloupců se do užšího iframe nevejde, dny jdou pod sebe.
+@media (max-width: 720px) {
+    .av-calendar__grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .av-calendar__day {
+        min-height: 0;
+    }
+
+    // Rozsah týdne nahoru, šipky pod něj na kraje.
+    .av-nav__title {
+        flex-basis: 100%;
+        order: -1;
+    }
+}
+
+// Úzký iframe na webu merchanta: obsazenost pod název.
+@media (max-width: 480px) {
+    .av-slot {
+        grid-template-columns: 6.5em minmax(0, 1fr);
+    }
+
+    .av-slot__occupancy {
+        grid-column: 2;
+        justify-self: start;
+    }
+}
+
+// Měsíční přehled. Stav dne nese barva i text pro čtečky, vysvětlivky jsou pod mřížkou.
+.av-month__grid {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: var(--av-space-1);
+    margin: 0 calc(-1 * var(--av-space-1));
+}
+
+.av-month__weekday {
+    padding: var(--av-space-1) 0;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: var(--av-color-muted);
+    text-align: center;
+
+    abbr {
+        text-decoration: none;
+    }
+}
+
+.av-month__day {
+    height: 2.75em;
+    padding: 0;
+    border-radius: var(--av-radius);
+    text-align: center;
+    vertical-align: middle;
+    font-variant-numeric: tabular-nums;
+}
+
+.av-month__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 2.75em;
+    border-radius: var(--av-radius);
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+        outline: 2px solid var(--av-color-accent);
+        outline-offset: -2px;
+    }
+}
+
+.av-month__day--free {
+    color: var(--av-color-free);
+    background: var(--av-color-free-bg);
+}
+
+.av-month__day--full {
+    color: var(--av-color-full);
+    background: var(--av-color-full-bg);
+}
+
+.av-month__day--closed {
+    color: var(--av-color-muted);
+    background: var(--av-color-unavailable-bg);
+}
+
+.av-month__day--outside {
+    color: var(--av-color-muted);
+    background: repeating-linear-gradient(135deg, var(--av-color-surface) 0 6px, var(--av-color-bg) 6px 12px);
+}
+
+.av-month__day--today {
+    box-shadow: inset 0 0 0 2px var(--av-color-accent);
+}
+
+.av-month__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--av-space-1) var(--av-space-3);
+    margin: var(--av-space-3) 0 0;
+    padding: 0;
+    font-size: 0.85em;
+    list-style: none;
+}
+
+.av-month__key::before {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: var(--av-space-1);
+    border-radius: 3px;
+    vertical-align: -0.1em;
+    content: "";
+}
+
+.av-month__key--free::before {
+    background: var(--av-color-free-bg);
+    box-shadow: inset 0 0 0 1px var(--av-color-free);
+}
+
+.av-month__key--full::before {
+    background: var(--av-color-full-bg);
+    box-shadow: inset 0 0 0 1px var(--av-color-full);
+}
+
+.av-month__key--closed::before {
+    background: var(--av-color-unavailable-bg);
+    box-shadow: inset 0 0 0 1px var(--av-color-muted);
+}
+
+// Věta s nejbližším volným termínem, třeba na stránce produktu.
+.av-next {
+    margin: 0;
+    font-weight: 600;
+}
+
+.av-next--none {
+    font-weight: 400;
+    color: var(--av-color-muted);
+}

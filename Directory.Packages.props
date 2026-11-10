@@ -1,0 +1,35 @@
+<Project>
+  <!-- Centrální správa verzí balíčků: jedna verze na balíček pro celé řešení. -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup Label="Reservanto.ApiClient">
+    <!-- Klient API stojí na Newtonsoft.Json, SPEC sekce 11. -->
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.12" />
+  </ItemGroup>
+
+
+  <ItemGroup Label="Překlad frontendu">
+    <!-- Bez Node, SCSS a TypeScript překládá dotnet build (konvence sekce C). Do publikované aplikace se nedostanou. -->
+    <PackageVersion Include="AspNetCore.SassCompiler" Version="1.105.1" />
+    <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup Label="Testy">
+    <!-- Testy běží na Microsoft.Testing.Platform (global.json), ne na VSTest. -->
+    <PackageVersion Include="xunit.v3" Version="4.0.1" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Extensions.Diagnostics.Testing" Version="10.10.0" />
+    <PackageVersion Include="Microsoft.Extensions.TimeProvider.Testing" Version="10.10.0" />
+    <PackageVersion Include="Microsoft.Playwright" Version="1.63.0" />
+    <PackageVersion Include="Deque.AxeCore.Playwright" Version="4.13.0" />
+    <PackageVersion Include="TngTech.ArchUnitNET" Version="0.13.4" />
+    <PackageVersion Include="YamlDotNet" Version="18.1.0" />
+  </ItemGroup>
+</Project>

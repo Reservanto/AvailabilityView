@@ -1,0 +1,116 @@
+@using AvailabilityView.Application.Availability
+@using AvailabilityView.Web.Generator
+@model GeneratorPage
+@{
+    ViewData["Title"] = Text["Generator.Title"];
+    GeneratorForm form = Model.Form;
+}
+
+@if (Model.Output is not { } output)
+{
+    <section class="av-setup__step">
+        <p role="status">@Text[$"Generator.Message.{Model.Message}"]</p>
+        @if (Model.Failure is { } failure)
+        {
+            <p>@Text[$"Setup.Status.{failure}.Explain"]</p>
+        }
+        @if (Model.Message == AvailabilityOutcome.NotConnected)
+        {
+            <p><a class="av-setup__button av-setup__button--primary" href="~/Setup">@Text["Generator.ToSetup"]</a></p>
+        }
+    </section>
+}
+else
+{
+    <p>@Text["Generator.Explain"]</p>
+
+    @* GET bez adresy cíle: volby jdou na stejnou stránku, i pod podadresářem IIS. Se skriptem se odešlou hned po změně. *@
+    <form method="get" data-av-autosubmit>
+        <fieldset class="av-setup__step av-generator__group">
+            <legend class="av-generator__legend">@Text["Generator.Views.Heading"]</legend>
+            <label class="av-setup__label" for="generator-view">@Text["Generator.Views.Default"]</label>
+            <select class="av-setup__input" id="generator-view" name="@VisitorParameters.View">
+                @foreach (DisplayView view in Enum.GetValues<DisplayView>())
+                {
+                    <option value="@VisitorParameters.NameOf(view)" selected="@(view == form.View)">@Text[$"Visitor.View.{view}"]</option>
+                }
+            </select>
+            <p class="av-setup__label" id="generator-also">@Text["Generator.Views.Also"]</p>
+            <ul class="av-generator__checks" aria-labelledby="generator-also">
+                @foreach (DisplayView view in Enum.GetValues<DisplayView>().Where(item => item != form.View))
+                {
+                    <li>
+                        <input type="checkbox" id="generator-also-@VisitorParameters.NameOf(view)" name="@GeneratorForm.AlsoParameter"
+                               value="@VisitorParameters.NameOf(view)" checked="@form.Also.Contains(view)">
+                        <label for="generator-also-@VisitorParameters.NameOf(view)">@Text[$"Visitor.View.{view}"]</label>
+                    </li>
+                }
+            </ul>
+        </fieldset>
+
+        <fieldset class="av-setup__step av-generator__group">
+            <legend class="av-generator__legend">@Text["Generator.Filters.Heading"]</legend>
+            @foreach (FilterField field in Model.Filters)
+            {
+                <label class="av-setup__label" for="generator-@field.Name">@Text[$"Visitor.Filter.{field.Filter}"]</label>
+                <select class="av-setup__input" id="generator-@field.Name" name="@field.Name">
+                    @if (field.AllowsAll)
+                    {
+                        <option value="" selected="@field.Options.All(option => !option.IsSelected)">@Text["Visitor.Filter.All"]</option>
+                    }
+                    @foreach (FilterChoice option in field.Options)
+                    {
+                        <option value="@option.Id" selected="@option.IsSelected">@option.Name</option>
+                    }
+                </select>
+            }
+            <p class="av-setup__label" id="generator-pickers">@Text["Generator.Filters.Pickers"]</p>
+            <ul class="av-generator__checks" aria-labelledby="generator-pickers">
+                @foreach (AvailabilityFilter filter in Enum.GetValues<AvailabilityFilter>())
+                {
+                    <li>
+                        <input type="checkbox" id="generator-picker-@VisitorParameters.NameOf(filter)" name="@VisitorParameters.Pickers"
+                               value="@VisitorParameters.NameOf(filter)" checked="@form.Pickers.Contains(filter)">
+                        <label for="generator-picker-@VisitorParameters.NameOf(filter)">@Text[$"Visitor.Filter.{filter}"]</label>
+                    </li>
+                }
+            </ul>
+        </fieldset>
+
+        <fieldset class="av-setup__step av-generator__group">
+            <legend class="av-generator__legend">@Text["Generator.Period.Heading"]</legend>
+            <label class="av-setup__label" for="generator-days">@Text["Generator.Period.Days"]</label>
+            <input class="av-setup__input av-generator__days" type="number" id="generator-days" name="@VisitorParameters.Days"
+                   value="@form.Days" min="1" max="@Model.MaxDays" required aria-describedby="generator-days-explain">
+            <p class="av-generator__explain" id="generator-days-explain">@Text["Generator.Period.DaysExplain", Model.MaxDays]</p>
+            <label class="av-setup__label" for="generator-lang">@Text["Generator.Period.Language"]</label>
+            <select class="av-setup__input" id="generator-lang" name="@VisitorParameters.Language">
+                @foreach (string language in AvailabilitySettings.Languages)
+                {
+                    <option value="@language" selected="@(language == form.Language)">@Text[$"Generator.Language.{language}"]</option>
+                }
+            </select>
+        </fieldset>
+
+        <button type="submit" class="av-setup__button av-setup__button--primary">@Text["Generator.Submit"]</button>
+    </form>
+
+    <section class="av-setup__step">
+        <h2>@Text["Generator.Preview.Heading"]</h2>
+        <iframe class="av-generator__preview" src="@output.PreviewUrl" title="@Text["Generator.Preview.Title"]" height="@GeneratorPage.FrameHeight"></iframe>
+    </section>
+
+    <section class="av-setup__step">
+        <h2>@Text["Generator.Link.Heading"]</h2>
+        <p>@Text["Generator.Link.Explain"]</p>
+        <pre class="av-setup__value" id="generator-link">@output.Link</pre>
+        <button type="button" class="av-setup__button" data-av-copy="generator-link" data-av-copied="@Text["Setup.Copied"]">@Text["Generator.Link.Copy"]</button>
+    </section>
+
+    <section class="av-setup__step">
+        <h2>@Text["Generator.Code.Heading"]</h2>
+        <p>@Text["Generator.Code.Explain"]</p>
+        <pre class="av-setup__value" id="generator-code">@output.Code</pre>
+        <button type="button" class="av-setup__button" data-av-copy="generator-code" data-av-copied="@Text["Setup.Copied"]">@Text["Generator.Code.Copy"]</button>
+    </section>
+}

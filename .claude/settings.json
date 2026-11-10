@@ -1,0 +1,54 @@
+{
+	"permissions": {
+		"allow": [
+			"Bash(git status*)",
+			"Bash(git diff*)",
+			"Bash(git log*)",
+			"Bash(git add *)",
+			"Bash(git commit *)",
+			"Bash(git push*)",
+			"Bash(git checkout *)",
+			"Bash(git branch*)",
+			"Bash(git merge *)",
+			"Bash(gh pr *)",
+			"Bash(codex exec -s read-only *)",
+			"PowerShell(git status*)",
+			"PowerShell(git diff*)",
+			"PowerShell(git log*)",
+			"PowerShell(git add *)",
+			"PowerShell(git commit *)",
+			"PowerShell(git push*)",
+			"PowerShell(git checkout *)",
+			"PowerShell(git branch*)",
+			"PowerShell(git merge *)",
+			"PowerShell(gh pr *)",
+			"PowerShell(codex exec -s read-only *)",
+			"Bash(dotnet build*)",
+			"Bash(dotnet test*)",
+			"Bash(dotnet run*)",
+			"Bash(dotnet publish*)",
+			"Bash(dotnet user-secrets*)",
+			"Bash(powershell -NoProfile -ExecutionPolicy Bypass -File eng/check.ps1*)",
+			"PowerShell(dotnet build*)",
+			"PowerShell(dotnet test*)",
+			"PowerShell(dotnet run*)",
+			"PowerShell(dotnet publish*)",
+			"PowerShell(dotnet user-secrets*)",
+			"PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File eng/check.ps1*)"
+		]
+	},
+	"hooks": {
+		"Stop": [
+			{
+				"hooks": [
+					{
+						"type": "command",
+						"command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/stop-check.mjs\"",
+						"timeout": 300,
+						"statusMessage": "Rychlé kontroly…"
+					}
+				]
+			}
+		]
+	}
+}

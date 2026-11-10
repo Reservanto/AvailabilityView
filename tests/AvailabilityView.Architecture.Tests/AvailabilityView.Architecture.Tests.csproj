@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Směr závislostí mezi projekty a typy. Každé pravidlo má negativní test. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="TngTech.ArchUnitNET" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AvailabilityView.Web\AvailabilityView.Web.csproj" />
+    <ProjectReference Include="..\..\src\AvailabilityView.Application\AvailabilityView.Application.csproj" />
+    <ProjectReference Include="..\..\src\AvailabilityView.Infrastructure\AvailabilityView.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Reservanto.ApiClient\Reservanto.ApiClient.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Shared\RepositoryRoot.cs" Link="Support\RepositoryRoot.cs" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>

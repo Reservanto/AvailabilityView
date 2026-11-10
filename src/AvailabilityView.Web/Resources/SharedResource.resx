@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Page.Title" xml:space="preserve">
+    <value>Volné termíny</value>
+  </data>
+  <data name="Visitor.Format.Day" xml:space="preserve">
+    <value>dddd d. MMMM</value>
+  </data>
+  <data name="Visitor.State.Free" xml:space="preserve">
+    <value>Volno</value>
+  </data>
+  <data name="Visitor.State.Busy" xml:space="preserve">
+    <value>Obsazeno</value>
+  </data>
+  <data name="Visitor.State.Unavailable" xml:space="preserve">
+    <value>Nedostupné</value>
+  </data>
+  <data name="Visitor.Legend" xml:space="preserve">
+    <value>Vysvětlivky</value>
+  </data>
+  <data name="Visitor.Today" xml:space="preserve">
+    <value>dnes</value>
+  </data>
+  <data name="Visitor.Full" xml:space="preserve">
+    <value>plně obsazeno</value>
+  </data>
+  <data name="Visitor.Message.NothingFree" xml:space="preserve">
+    <value>V tomto období nejsou žádné volné termíny.</value>
+  </data>
+  <data name="Visitor.Message.ViewNotAvailable" xml:space="preserve">
+    <value>Tento pohled není dostupný.</value>
+  </data>
+  <data name="Visitor.Message.UnsupportedSegment" xml:space="preserve">
+    <value>Tento druh nabídky stránka zatím neumí zobrazit.</value>
+  </data>
+  <data name="Visitor.Message.NotConnected" xml:space="preserve">
+    <value>Tato stránka ještě není připojená k Reservantu.</value>
+  </data>
+  <data name="Visitor.Message.SourceUnavailable" xml:space="preserve">
+    <value>Dostupnost teď nejde načíst. Zkuste to prosím za chvíli.</value>
+  </data>
+  <data name="Visitor.Connect" xml:space="preserve">
+    <value>Připojit účet Reservanto</value>
+  </data>
+  <data name="Setup.Title" xml:space="preserve">
+    <value>Připojení k Reservantu</value>
+  </data>
+  <data name="Setup.Copy" xml:space="preserve">
+    <value>Zkopírovat</value>
+  </data>
+  <data name="Setup.Copied" xml:space="preserve">
+    <value>Zkopírováno</value>
+  </data>
+  <data name="Setup.ClientId.Heading" xml:space="preserve">
+    <value>1. Získejte ClientId</value>
+  </data>
+  <data name="Setup.ClientId.Explain" xml:space="preserve">
+    <value>ClientId je označení vaší aplikace v Reservantu. Požádejte o něj e-mailem na obchod@reservanto.cz a do žádosti vložte návratovou adresu této stránky.</value>
+  </data>
+  <data name="Setup.ClientId.RedirectUrl" xml:space="preserve">
+    <value>Návratová adresa:</value>
+  </data>
+  <data name="Setup.ClientId.Label" xml:space="preserve">
+    <value>ClientId</value>
+  </data>
+  <data name="Setup.ClientId.Missing" xml:space="preserve">
+    <value>Vyplňte ClientId, které vám přidělilo Reservanto.</value>
+  </data>
+  <data name="Setup.Consent.Heading" xml:space="preserve">
+    <value>2. Povolte přístup</value>
+  </data>
+  <data name="Setup.Consent.Explain" xml:space="preserve">
+    <value>V Reservantu se přihlásíte a povolíte této stránce přístup ke čtení. V Reservantu nic nezmění. Stránka bude smět číst:</value>
+  </data>
+  <data name="Setup.Consent.Submit" xml:space="preserve">
+    <value>Pokračovat do Reservanta</value>
+  </data>
+  <data name="Setup.Occupancy.Label" xml:space="preserve">
+    <value>Ukazovat obsazenost na hodinové ose</value>
+  </data>
+  <data name="Setup.Occupancy.Explain" xml:space="preserve">
+    <value>Hodinová osa pak u individuálních služeb odliší rezervované časy od ostatních nedostupných. Bez této volby ukáže jen volné a nedostupné časy a stránka nebude smět číst rezervace. S volbou bude navíc smět číst:</value>
+  </data>
+  <data name="Setup.Right.BookingResource_r" xml:space="preserve">
+    <value>zdroje, například zaměstnance nebo místnosti</value>
+  </data>
+  <data name="Setup.Right.BookingService_r" xml:space="preserve">
+    <value>služby</value>
+  </data>
+  <data name="Setup.Right.Event_r" xml:space="preserve">
+    <value>rezervace, jen kvůli obsazeným časům v kalendáři. Z rezervace stránka použije čas a zdroj, údaje zákazníků zahodí hned při načtení a nikde je neukáže ani neuloží</value>
+  </data>
+  <data name="Setup.Right.FreeSpace_r" xml:space="preserve">
+    <value>volné termíny</value>
+  </data>
+  <data name="Setup.Right.Location_r" xml:space="preserve">
+    <value>provozovny</value>
+  </data>
+  <data name="Setup.Right.Merchant_r" xml:space="preserve">
+    <value>základní údaje o účtu, stránka z nich použije jen název</value>
+  </data>
+  <data name="Setup.Right.Segment_r" xml:space="preserve">
+    <value>zaměření</value>
+  </data>
+  <data name="Setup.Token.Heading" xml:space="preserve">
+    <value>3. Uložte token</value>
+  </data>
+  <data name="Setup.Token.Warning" xml:space="preserve">
+    <value>Token je tajný a dává přístup k vašemu účtu. Zkopírujte si ho hned, po obnovení stránky už nebude vidět.</value>
+  </data>
+  <data name="Setup.Token.Production" xml:space="preserve">
+    <value>Vložte tuto část do souboru appsettings.Production.json ve složce aplikace. Když soubor neexistuje, založte ho.</value>
+  </data>
+  <data name="Setup.Token.Development" xml:space="preserve">
+    <value>Spusťte v kořenové složce projektu tento příkaz. Když je to první tajný údaj projektu na tomto počítači, aplikaci potom jednou restartujte.</value>
+  </data>
+  <data name="Setup.Token.Next" xml:space="preserve">
+    <value>Aplikaci není potřeba restartovat, změnu načte sama.</value>
+  </data>
+  <data name="Setup.Token.Verify" xml:space="preserve">
+    <value>Ověřit připojení</value>
+  </data>
+  <data name="Setup.Callback.Again" xml:space="preserve">
+    <value>Zpět na připojení</value>
+  </data>
+  <data name="Setup.Callback.Denied.Heading" xml:space="preserve">
+    <value>Přístup nebyl povolen</value>
+  </data>
+  <data name="Setup.Callback.Denied.Explain" xml:space="preserve">
+    <value>Reservanto přístup nepovolilo. Stránka se bez něj nepřipojí. Můžete to zkusit znovu.</value>
+  </data>
+  <data name="Setup.Callback.Invalid.Heading" xml:space="preserve">
+    <value>Token se nepodařilo přečíst</value>
+  </data>
+  <data name="Setup.Callback.Invalid.Explain" xml:space="preserve">
+    <value>Odpověď z Reservanta neobsahuje platný token. Projděte připojení znovu.</value>
+  </data>
+  <data name="Setup.Status.Connected.Heading" xml:space="preserve">
+    <value>4. Stránka je připojená</value>
+  </data>
+  <data name="Setup.Status.Connected.OccupancyOn" xml:space="preserve">
+    <value>Obsazenost na hodinové ose je zapnutá.</value>
+  </data>
+  <data name="Setup.Status.Connected.OccupancyOff" xml:space="preserve">
+    <value>Obsazenost na hodinové ose je vypnutá, stránka nesmí číst rezervace. Kdo ji chce zapnout, smaže token z konfigurace a projde připojení znovu se zaškrtnutou volbou obsazenosti.</value>
+  </data>
+  <data name="Setup.Status.Connected.Merchant" xml:space="preserve">
+    <value>Připojený účet:</value>
+  </data>
+  <data name="Setup.Status.Connected.Counts" xml:space="preserve">
+    <value>Stránka vidí {0} veřejných zaměření a {1} veřejných provozoven.</value>
+  </data>
+  <data name="Setup.Status.TokenRejected.Heading" xml:space="preserve">
+    <value>Reservanto token odmítlo</value>
+  </data>
+  <data name="Setup.Status.TokenRejected.Explain" xml:space="preserve">
+    <value>Token je neplatný nebo byl zrušený. Smažte ho z konfigurace a projděte připojení znovu na této stránce.</value>
+  </data>
+  <data name="Setup.Status.MissingRights.Heading" xml:space="preserve">
+    <value>Token nemá potřebná práva</value>
+  </data>
+  <data name="Setup.Status.MissingRights.Explain" xml:space="preserve">
+    <value>Smažte token z konfigurace a projděte připojení znovu, aby se povolila všechna práva.</value>
+  </data>
+  <data name="Setup.Status.Unavailable.Heading" xml:space="preserve">
+    <value>Reservanto teď neodpovídá</value>
+  </data>
+  <data name="Setup.Status.Unavailable.Explain" xml:space="preserve">
+    <value>Token je uložený, ale ověřit ho teď nejde. Zkuste stránku za chvíli obnovit.</value>
+  </data>
+  <data name="Setup.Status.NotConnected.Heading" xml:space="preserve">
+    <value>Stránka není připojená</value>
+  </data>
+  <data name="Setup.Status.NotConnected.Explain" xml:space="preserve">
+    <value>V konfiguraci není token.</value>
+  </data>
+  <data name="Setup.Next.Heading" xml:space="preserve">
+    <value>5. Co dál</value>
+  </data>
+  <data name="Setup.Next.Explain" xml:space="preserve">
+    <value>Aby šlo stránku vložit do vašeho webu přes iframe, doplňte domény webu do konfigurace instance, na serveru do souboru appsettings.Production.json:</value>
+  </data>
+  <data name="Visitor.Format.CalendarDay" xml:space="preserve">
+    <value>ddd d. M.</value>
+  </data>
+  <data name="Visitor.Format.WeekStart" xml:space="preserve">
+    <value>d. M.</value>
+  </data>
+  <data name="Visitor.Format.WeekEnd" xml:space="preserve">
+    <value>d. M. yyyy</value>
+  </data>
+  <data name="Visitor.Views" xml:space="preserve">
+    <value>Zobrazení</value>
+  </data>
+  <data name="Visitor.View.Agenda" xml:space="preserve">
+    <value>Seznam</value>
+  </data>
+  <data name="Visitor.View.Calendar" xml:space="preserve">
+    <value>Kalendář</value>
+  </data>
+  <data name="Visitor.View.Timegrid" xml:space="preserve">
+    <value>Časová osa</value>
+  </data>
+  <data name="Visitor.Week.Navigation" xml:space="preserve">
+    <value>Týdny</value>
+  </data>
+  <data name="Visitor.Week.Previous" xml:space="preserve">
+    <value>Předchozí týden</value>
+  </data>
+  <data name="Visitor.Week.Next" xml:space="preserve">
+    <value>Další týden</value>
+  </data>
+  <data name="Visitor.Outside" xml:space="preserve">
+    <value>mimo nabídku</value>
+  </data>
+  <data name="Visitor.Filters" xml:space="preserve">
+    <value>Filtry</value>
+  </data>
+  <data name="Visitor.Filter.Segment" xml:space="preserve">
+    <value>Zaměření</value>
+  </data>
+  <data name="Visitor.Filter.Location" xml:space="preserve">
+    <value>Provozovna</value>
+  </data>
+  <data name="Visitor.Filter.Service" xml:space="preserve">
+    <value>Služba</value>
+  </data>
+  <data name="Visitor.Filter.Resource" xml:space="preserve">
+    <value>Zdroj</value>
+  </data>
+  <data name="Visitor.Filter.All" xml:space="preserve">
+    <value>Všechny</value>
+  </data>
+  <data name="Visitor.Filter.Submit" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="Visitor.TooManyRequests" xml:space="preserve">
+    <value>Stránku teď otevíráte příliš často. Zkuste to prosím za minutu.</value>
+  </data>
+  <data name="Visitor.View.Month" xml:space="preserve">
+    <value>Měsíc</value>
+  </data>
+  <data name="Visitor.View.Next" xml:space="preserve">
+    <value>Nejbližší termín</value>
+  </data>
+  <data name="Visitor.Month.Navigation" xml:space="preserve">
+    <value>Měsíce</value>
+  </data>
+  <data name="Visitor.Month.Previous" xml:space="preserve">
+    <value>Předchozí měsíc</value>
+  </data>
+  <data name="Visitor.Month.Next" xml:space="preserve">
+    <value>Další měsíc</value>
+  </data>
+  <data name="Visitor.Format.Month" xml:space="preserve">
+    <value>MMMM yyyy</value>
+  </data>
+  <data name="Visitor.Day.Free" xml:space="preserve">
+    <value>volno</value>
+  </data>
+  <data name="Visitor.Day.Full" xml:space="preserve">
+    <value>plno</value>
+  </data>
+  <data name="Visitor.Day.Closed" xml:space="preserve">
+    <value>zavřeno</value>
+  </data>
+  <data name="Visitor.Day.NoLessons" xml:space="preserve">
+    <value>bez lekcí</value>
+  </data>
+  <data name="Visitor.Next.Found" xml:space="preserve">
+    <value>Nejbližší volný termín: {0}</value>
+  </data>
+  <data name="Visitor.Next.Today" xml:space="preserve">
+    <value>dnes</value>
+  </data>
+  <data name="Visitor.Next.Tomorrow" xml:space="preserve">
+    <value>zítra</value>
+  </data>
+  <data name="Visitor.Format.NextDay" xml:space="preserve">
+    <value>dddd d. M.</value>
+  </data>
+  <data name="Visitor.Next.None" xml:space="preserve">
+    <value>Do {0} není volný termín.</value>
+  </data>
+  <data name="Visitor.Format.Until" xml:space="preserve">
+    <value>d. M.</value>
+  </data>
+  <data name="Generator.Title" xml:space="preserve">
+    <value>Generátor odkazu</value>
+  </data>
+  <data name="Generator.Explain" xml:space="preserve">
+    <value>Vyberte, co má stránka ukázat. Náhled pod formulářem je přesně to, co uvidí návštěvník. Pak zkopírujte odkaz nebo kód pro vložení na svůj web.</value>
+  </data>
+  <data name="Generator.Views.Heading" xml:space="preserve">
+    <value>Zobrazení</value>
+  </data>
+  <data name="Generator.Views.Default" xml:space="preserve">
+    <value>Výchozí zobrazení</value>
+  </data>
+  <data name="Generator.Views.Also" xml:space="preserve">
+    <value>Návštěvník může přepnout i na</value>
+  </data>
+  <data name="Generator.Filters.Heading" xml:space="preserve">
+    <value>Co stránka ukáže</value>
+  </data>
+  <data name="Generator.Filters.Pickers" xml:space="preserve">
+    <value>Návštěvník si sám vybírá</value>
+  </data>
+  <data name="Generator.Period.Heading" xml:space="preserve">
+    <value>Období a jazyk</value>
+  </data>
+  <data name="Generator.Period.Days" xml:space="preserve">
+    <value>Kolik dní dopředu</value>
+  </data>
+  <data name="Generator.Period.DaysExplain" xml:space="preserve">
+    <value>Nejvýš {0} dní. Nastavte nejvýš na to, jak daleko dopředu jde u vás rezervovat. Delší období by v měsíci ukázalo dny, kdy rezervovat nejde, jako plné.</value>
+  </data>
+  <data name="Generator.Period.Language" xml:space="preserve">
+    <value>Jazyk stránky</value>
+  </data>
+  <data name="Generator.Language.cs" xml:space="preserve">
+    <value>čeština</value>
+  </data>
+  <data name="Generator.Language.en" xml:space="preserve">
+    <value>angličtina</value>
+  </data>
+  <data name="Generator.Submit" xml:space="preserve">
+    <value>Zobrazit náhled</value>
+  </data>
+  <data name="Generator.Preview.Heading" xml:space="preserve">
+    <value>Náhled</value>
+  </data>
+  <data name="Generator.Preview.Title" xml:space="preserve">
+    <value>Náhled stránky s volnými termíny</value>
+  </data>
+  <data name="Generator.Link.Heading" xml:space="preserve">
+    <value>Odkaz</value>
+  </data>
+  <data name="Generator.Link.Explain" xml:space="preserve">
+    <value>Odkaz otevře stránku samostatně, třeba z tlačítka na webu nebo z e-mailu.</value>
+  </data>
+  <data name="Generator.Link.Copy" xml:space="preserve">
+    <value>Zkopírovat odkaz</value>
+  </data>
+  <data name="Generator.Code.Heading" xml:space="preserve">
+    <value>Kód pro vložení</value>
+  </data>
+  <data name="Generator.Code.Explain" xml:space="preserve">
+    <value>Kód vložte do HTML svého webu. Doména webu musí být v povolených doménách instance, jinak stránku prohlížeč do webu nevloží.</value>
+  </data>
+  <data name="Generator.Code.Copy" xml:space="preserve">
+    <value>Zkopírovat kód</value>
+  </data>
+  <data name="Generator.ToSetup" xml:space="preserve">
+    <value>Připojit k Reservantu</value>
+  </data>
+  <data name="Generator.Message.NotConnected" xml:space="preserve">
+    <value>Instance zatím není připojená k Reservantu. Generátor potřebuje veřejná data účtu.</value>
+  </data>
+  <data name="Generator.Message.SourceUnavailable" xml:space="preserve">
+    <value>Data z Reservanta teď nejde načíst.</value>
+  </data>
+  <data name="Generator.Message.UnsupportedSegment" xml:space="preserve">
+    <value>Účet nemá veřejné zaměření typu, který stránka umí zobrazit.</value>
+  </data>
+  <data name="Generator.Message.ViewNotAvailable" xml:space="preserve">
+    <value>Žádné veřejné zaměření nemá veřejnou provozovnu se zdrojem a službou. Stránka nemá co zobrazit.</value>
+  </data>
+  <data name="Setup.Next.Origins" xml:space="preserve">
+    <value>Doménu zapište se schématem a bez cesty, třeba https://www.vas-web.cz. Další doménu přidejte jako další položku seznamu. Změna platí po restartu aplikace. Odkazem jde stránku otevřít i bez toho.</value>
+  </data>
+  <data name="Setup.Next.Generator" xml:space="preserve">
+    <value>Otevřít generátor odkazu</value>
+  </data>
+</root>

@@ -1,0 +1,44 @@
+@model ConnectViewModel
+
+<section class="av-setup__step">
+    <h2>@Text["Setup.ClientId.Heading"]</h2>
+    <p>@Text["Setup.ClientId.Explain"]</p>
+    <p>@Text["Setup.ClientId.RedirectUrl"]</p>
+    <pre class="av-setup__value" id="callback-url">@Model.CallbackUrl.AbsoluteUri</pre>
+    <button type="button" class="av-setup__button" data-av-copy="callback-url" data-av-copied="@Text["Setup.Copied"]">@Text["Setup.Copy"]</button>
+</section>
+
+<section class="av-setup__step">
+    <h2>@Text["Setup.Consent.Heading"]</h2>
+    <p>@Text["Setup.Consent.Explain"]</p>
+    <ul>
+        @foreach (string right in Model.Rights)
+        {
+            <li>@Text[$"Setup.Right.{right}"]</li>
+        }
+    </ul>
+    <form method="post" action="~/Setup/Connect">
+        <label class="av-setup__label" for="client-id">@Text["Setup.ClientId.Label"]</label>
+        <input class="av-setup__input" id="client-id" name="clientId" value="@Model.ClientId" required maxlength="200" autocomplete="off"
+               aria-describedby="@(Model.ClientIdMissing ? "client-id-error" : null)">
+        @if (Model.ClientIdMissing)
+        {
+            <p class="av-setup__error" id="client-id-error" role="alert">@Text["Setup.ClientId.Missing"]</p>
+        }
+        <div class="av-setup__choice">
+            <input type="checkbox" id="occupancy" name="occupancy" value="1" checked="@Model.Occupancy"
+                   aria-describedby="occupancy-explain">
+            <label class="av-setup__choice-label" for="occupancy">@Text["Setup.Occupancy.Label"]</label>
+            <div class="av-setup__choice-explain" id="occupancy-explain">
+                <p>@Text["Setup.Occupancy.Explain"]</p>
+                <ul>
+                    @foreach (string right in Model.OccupancyRights)
+                    {
+                        <li>@Text[$"Setup.Right.{right}"]</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <button type="submit" class="av-setup__button av-setup__button--primary">@Text["Setup.Consent.Submit"]</button>
+    </form>
+</section>

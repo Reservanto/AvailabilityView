@@ -1,0 +1,22 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:12.4245151+01:00",
+  "endpoint": "Authorize/GetShortTimeToken",
+  "scenario": "ok",
+  "request": {
+    "LongTimeToken": "REDACTED",
+    "TimeStamp": 1794231672
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "ShortTimeToken": "REDACTED",
+      "IsError": false,
+      "ErrorParameter": null,
+      "ErrorMessage": null,
+      "ErrorParameters": [],
+      "ErrorMessages": []
+    }
+  }
+}

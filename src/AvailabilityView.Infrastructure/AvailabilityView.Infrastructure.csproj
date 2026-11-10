@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\AvailabilityView.Application\AvailabilityView.Application.csproj" />
+    <ProjectReference Include="..\Reservanto.ApiClient\Reservanto.ApiClient.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="AvailabilityView.Infrastructure.Tests" />
+  </ItemGroup>
+
+</Project>

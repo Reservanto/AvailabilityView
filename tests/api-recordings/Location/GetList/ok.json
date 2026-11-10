@@ -1,0 +1,260 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:12.4245151+01:00",
+  "endpoint": "Location/GetList",
+  "scenario": "ok",
+  "request": {
+    "OnlyPublic": true,
+    "Page": 1,
+    "PageSize": 100,
+    "TimeStamp": 1794231672
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "Items": [
+        {
+          "LocationId": 2023,
+          "Name": "Provozovna 2023",
+          "CreatedAt": 1376383235,
+          "ModifiedAt": 1723640404,
+          "Description": null,
+          "Phone": "REDACTED",
+          "Email": null,
+          "Address": {
+            "Street": "Ulice 1",
+            "City": "Město",
+            "ZipCode": "000 00",
+            "State": null,
+            "Country": "Česká republika",
+            "CountryTwoLetterName": "CZ",
+            "Name": null,
+            "Latitude": null,
+            "Longitude": null
+          },
+          "WorkingHours": [
+            {
+              "DayOfWeek": 1,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 2,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 3,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 4,
+              "Start": 1794214800,
+              "End": 1794236400
+            },
+            {
+              "DayOfWeek": 5,
+              "Start": 1794211200,
+              "End": 1794240000
+            }
+          ],
+          "State": "Public",
+          "Id": 2023
+        },
+        {
+          "LocationId": 3428,
+          "Name": "Provozovna 3428",
+          "CreatedAt": 1405351999,
+          "ModifiedAt": 1706870600,
+          "Description": null,
+          "Phone": null,
+          "Email": null,
+          "Address": {
+            "Street": "Ulice 1",
+            "City": "Město",
+            "ZipCode": "000 00",
+            "State": null,
+            "Country": "Česká republika",
+            "CountryTwoLetterName": "CZ",
+            "Name": null,
+            "Latitude": null,
+            "Longitude": null
+          },
+          "WorkingHours": [
+            {
+              "DayOfWeek": 1,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 2,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 3,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 4,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 5,
+              "Start": 1794211200,
+              "End": 1794240000
+            }
+          ],
+          "State": "Public",
+          "Id": 3428
+        },
+        {
+          "LocationId": 10151,
+          "Name": "Provozovna 10151",
+          "CreatedAt": 1435935717,
+          "ModifiedAt": 1769181668,
+          "Description": null,
+          "Phone": null,
+          "Email": null,
+          "Address": {
+            "Street": "Ulice 1",
+            "City": "Město",
+            "ZipCode": "000 00",
+            "State": null,
+            "Country": "Česká republika",
+            "CountryTwoLetterName": "CZ",
+            "Name": null,
+            "Latitude": null,
+            "Longitude": null
+          },
+          "WorkingHours": [
+            {
+              "DayOfWeek": 1,
+              "Start": 1794204000,
+              "End": 1794250800
+            },
+            {
+              "DayOfWeek": 2,
+              "Start": 1794204000,
+              "End": 1794250800
+            },
+            {
+              "DayOfWeek": 3,
+              "Start": 1794204000,
+              "End": 1794250800
+            },
+            {
+              "DayOfWeek": 4,
+              "Start": 1794204000,
+              "End": 1794250800
+            },
+            {
+              "DayOfWeek": 5,
+              "Start": 1794204000,
+              "End": 1794250800
+            },
+            {
+              "DayOfWeek": 6,
+              "Start": 1794211200,
+              "End": 1794222000
+            }
+          ],
+          "State": "Public",
+          "Id": 10151
+        },
+        {
+          "LocationId": 17362,
+          "Name": "Provozovna 17362",
+          "CreatedAt": 1639035578,
+          "ModifiedAt": 1639035578,
+          "Description": null,
+          "Phone": null,
+          "Email": null,
+          "Address": null,
+          "WorkingHours": [
+            {
+              "DayOfWeek": 1,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 2,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 3,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 4,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 5,
+              "Start": 1794211200,
+              "End": 1794240000
+            }
+          ],
+          "State": "Public",
+          "Id": 17362
+        },
+        {
+          "LocationId": 20186,
+          "Name": "Provozovna 20186",
+          "CreatedAt": 1686321758,
+          "ModifiedAt": 1686321758,
+          "Description": null,
+          "Phone": "REDACTED",
+          "Email": null,
+          "Address": {
+            "Street": "Ulice 1",
+            "City": "Město",
+            "ZipCode": "000 00",
+            "State": null,
+            "Country": "Česká republika",
+            "CountryTwoLetterName": "CZ",
+            "Name": null,
+            "Latitude": null,
+            "Longitude": null
+          },
+          "WorkingHours": [
+            {
+              "DayOfWeek": 1,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 2,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 3,
+              "Start": 1794211200,
+              "End": 1794240000
+            },
+            {
+              "DayOfWeek": 4,
+              "Start": 1794211200,
+              "End": 1794240000
+            }
+          ],
+          "State": "Public",
+          "Id": 20186
+        }
+      ],
+      "IsError": false,
+      "ErrorParameter": null,
+      "ErrorMessage": null,
+      "ErrorParameters": [],
+      "ErrorMessages": []
+    }
+  }
+}

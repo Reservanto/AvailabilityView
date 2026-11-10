@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "AvailabilityView.Web",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "src/AvailabilityView.Web", "--launch-profile", "AvailabilityView.Web"],
+      "port": 5001,
+      "url": "https://localhost:5001"
+    }
+  ]
+}

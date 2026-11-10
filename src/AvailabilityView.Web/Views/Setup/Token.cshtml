@@ -1,0 +1,21 @@
+@model TokenViewModel
+
+<section class="av-setup__step" data-av-forget-address>
+    <h2>@Text["Setup.Token.Heading"]</h2>
+    <p>@Text["Setup.Token.Warning"]</p>
+
+    @if (Model.IsDevelopment)
+    {
+        <p>@Text["Setup.Token.Development"]</p>
+        <pre class="av-setup__value" id="token-instructions">@Model.UserSecretsCommand</pre>
+    }
+    else
+    {
+        <p>@Text["Setup.Token.Production"]</p>
+        <pre class="av-setup__value" id="token-instructions">@Model.ProductionSettings</pre>
+    }
+
+    <button type="button" class="av-setup__button" data-av-copy="token-instructions" data-av-copied="@Text["Setup.Copied"]">@Text["Setup.Copy"]</button>
+    <p>@Text["Setup.Token.Next"]</p>
+    <p><a class="av-setup__button av-setup__button--primary" href="~/Setup">@Text["Setup.Token.Verify"]</a></p>
+</section>

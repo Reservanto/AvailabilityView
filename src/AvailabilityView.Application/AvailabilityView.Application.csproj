@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Spodek řešení: doménová rozhraní a logika, žádné závislosti na webu ani na Reservanto API. -->
+
+</Project>

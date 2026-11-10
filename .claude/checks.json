@@ -1,0 +1,3 @@
+{
+	"fast": "powershell -NoProfile -ExecutionPolicy Bypass -File eng/check.ps1 -Mode Fast"
+}

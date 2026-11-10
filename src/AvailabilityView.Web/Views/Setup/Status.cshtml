@@ -1,0 +1,35 @@
+@model ConnectionCheckResult
+
+<section class="av-setup__step">
+    <h2>@Text[$"Setup.Status.{Model.State}.Heading"]</h2>
+    @if (Model.State == ConnectionState.Connected)
+    {
+        @if (!string.IsNullOrEmpty(Model.MerchantName))
+        {
+            <p>@Text["Setup.Status.Connected.Merchant"] <strong>@Model.MerchantName</strong></p>
+        }
+        <p>@Text["Setup.Status.Connected.Counts", Model.PublicSegments, Model.PublicLocations]</p>
+        <p>@Text[Model.ShowsOccupancy ? "Setup.Status.Connected.OccupancyOn" : "Setup.Status.Connected.OccupancyOff"]</p>
+    }
+    else
+    {
+        <p>@Text[$"Setup.Status.{Model.State}.Explain"]</p>
+    }
+</section>
+
+@if (Model.State == ConnectionState.Connected)
+{
+    <section class="av-setup__step">
+        <h2>@Text["Setup.Next.Heading"]</h2>
+        <p>@Text["Setup.Next.Explain"]</p>
+        @* Klíč konfigurace je veřejné rozhraní (docs/SPEC.md sekce 5), tamtéž je i tvar hodnoty. *@
+        <pre class="av-setup__value" id="allowed-origins">{
+  "AvailabilityView": {
+    "AllowedFrameOrigins": [ "https://www.vas-web.cz" ]
+  }
+}</pre>
+        <button type="button" class="av-setup__button" data-av-copy="allowed-origins" data-av-copied="@Text["Setup.Copied"]">@Text["Setup.Copy"]</button>
+        <p>@Text["Setup.Next.Origins"]</p>
+        <p><a class="av-setup__button av-setup__button--primary" href="~/Generator">@Text["Setup.Next.Generator"]</a></p>
+    </section>
+}

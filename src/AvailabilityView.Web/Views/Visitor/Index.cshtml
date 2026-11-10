@@ -1,0 +1,223 @@
+@model VisitorPage
+
+@if (Model.Views.Count > 0)
+{
+    <nav class="av-views" aria-label="@Text["Visitor.Views"]">
+        <ul class="av-views__list">
+            @foreach (ViewLink link in Model.Views)
+            {
+                <li><a class="av-views__link" href="@link.Url" aria-current="@(link.IsCurrent ? "page" : null)">@Text[$"Visitor.View.{link.View}"]</a></li>
+            }
+        </ul>
+    </nav>
+}
+@if (Model.Filters is { } filters)
+{
+    <form class="av-filters" method="get" aria-label="@Text["Visitor.Filters"]" data-av-filters>
+        @foreach (KeptParameter kept in filters.Kept)
+        {
+            <input type="hidden" name="@kept.Name" value="@kept.Value">
+        }
+        @foreach (FilterField field in filters.Fields)
+        {
+            <div class="av-filters__field">
+                <label class="av-filters__label" for="av-filter-@field.Name">@Text[$"Visitor.Filter.{field.Filter}"]</label>
+                <select class="av-filters__select" id="av-filter-@field.Name" name="@field.Name">
+                    @if (field.AllowsAll)
+                    {
+                        <option value="" selected="@field.Options.All(option => !option.IsSelected)">@Text["Visitor.Filter.All"]</option>
+                    }
+                    @foreach (FilterChoice option in field.Options)
+                    {
+                        <option value="@option.Id" selected="@option.IsSelected">@option.Name</option>
+                    }
+                </select>
+            </div>
+        }
+        <button class="av-filters__submit" type="submit">@Text["Visitor.Filter.Submit"]</button>
+    </form>
+}
+@if (Model.ServiceHeading is { } service)
+{
+    <p class="av-service">@service</p>
+}
+@if (Model.Message is { } message)
+{
+    <p class="av-message @(message == PageMessage.SourceUnavailable ? "av-message--error" : null)">@Text[$"Visitor.Message.{message}"]</p>
+    @if (message == PageMessage.NotConnected)
+    {
+        <p class="av-message__action"><a href="~/Setup">@Text["Visitor.Connect"]</a></p>
+    }
+}
+@if (Model.Agenda is { } agenda)
+{
+    <div class="av-agenda">
+        @foreach (AgendaDay day in agenda.Days)
+        {
+            <section class="av-agenda__day">
+                <h2 class="av-agenda__date">
+                    @day.Heading
+                    @if (day.IsToday)
+                    {
+                        <span class="av-agenda__date-today">@Text["Visitor.Today"]</span>
+                    }
+                </h2>
+                <ul class="av-agenda__list">
+                    @foreach (SlotModel slot in day.Slots)
+                    {
+                        <li class="av-slot @(slot.IsFull ? "av-slot--full" : null)">
+                            <span class="av-slot__time">@slot.Time</span>
+                            <span class="av-slot__service">@slot.ServiceName<span class="av-slot__resource">@slot.ResourceName</span></span>
+                            @if (slot.OccupancyText is not null)
+                            {
+                                <span class="av-slot__occupancy">@slot.OccupancyText@if (slot.IsFull) {<span class="av-visually-hidden">, @Text["Visitor.Full"]</span>}</span>
+                            }
+                            else if (slot.IsFull)
+                            {
+                                <span class="av-slot__occupancy">@Text["Visitor.Full"]</span>
+                            }
+                        </li>
+                    }
+                </ul>
+            </section>
+        }
+    </div>
+}
+@if (Model.Calendar is { } calendar)
+{
+    <div class="av-calendar">
+        @await Html.PartialAsync("_RangeNav", calendar.Nav)
+        <div class="av-calendar__grid">
+            @foreach (CalendarDay day in calendar.Days)
+            {
+                <section class="av-calendar__day @(day.IsOffered ? null : "av-calendar__day--outside") @(day.IsToday ? "av-calendar__day--today" : null)">
+                    <h2 class="av-calendar__date">@day.Heading@if (day.IsToday) {<span class="av-visually-hidden">, @Text["Visitor.Today"]</span>}</h2>
+                    @if (!day.IsOffered)
+                    {
+                        <span class="av-calendar__outside">@Text["Visitor.Outside"]</span>
+                    }
+                    else if (day.Slots.Count > 0)
+                    {
+                        <ul class="av-calendar__slots">
+                            @foreach (SlotModel slot in day.Slots)
+                            {
+                                <li class="av-calendar__slot @(slot.IsFull ? "av-calendar__slot--full" : null)">
+                                    <span class="av-calendar__slot-time">@slot.Time</span>
+                                    @if (slot.ServiceName is not null)
+                                    {
+                                        <span>@slot.ServiceName</span>
+                                    }
+                                    <span class="av-calendar__slot-meta">@slot.ResourceName@if (slot.OccupancyText is not null) {<text> · @slot.OccupancyText</text>}@if (slot.IsFull) {<span class="av-visually-hidden">, @Text["Visitor.Full"]</span>}</span>
+                                </li>
+                            }
+                        </ul>
+                    }
+                </section>
+            }
+        </div>
+    </div>
+}
+@if (Model.Timegrid is { } grid)
+{
+    <div class="av-timegrid">
+        @await Html.PartialAsync("_RangeNav", grid.Nav)
+        @if (grid.Legend.Count > 0)
+        {
+            <ul class="av-legend" aria-label="@Text["Visitor.Legend"]">
+                @foreach (var state in grid.Legend)
+                {
+                    <li class="av-legend__item av-legend__item--@StateClass.Of(state)">@Text[$"Visitor.State.{state}"]</li>
+                }
+            </ul>
+        }
+        <div class="av-timegrid__grid">
+            <div class="av-timegrid__axis" aria-hidden="true">
+                <span class="av-timegrid__date"></span>
+                <div class="av-timegrid__track">
+                    @foreach (TimegridHour hour in grid.Hours)
+                    {
+                        <span class="av-timegrid__hour av-at-@hour.Row">@hour.Label</span>
+                    }
+                    <span class="av-timegrid__size av-to-@grid.Rows"></span>
+                </div>
+            </div>
+            @foreach (TimegridDay day in grid.Days)
+            {
+                <section class="av-timegrid__day @(day.IsOffered ? null : "av-timegrid__day--outside") @(day.IsToday ? "av-timegrid__day--today" : null)">
+                    <h2 class="av-timegrid__date">@day.Heading@if (day.IsToday) {<span class="av-visually-hidden">, @Text["Visitor.Today"]</span>}@if (!day.IsOffered) {<span class="av-visually-hidden">, @Text["Visitor.Outside"]</span>}</h2>
+                    <div class="av-timegrid__track av-lanes-@day.Lanes">
+                        @foreach (TimegridBlock block in day.Blocks)
+                        {
+                            <div class="av-block av-block--@block.Kind av-at-@block.From av-to-@block.To av-lane-@block.Lane" title="@block.Description">
+                                <span class="av-block__text" aria-hidden="true">@block.Text</span>
+                                <span class="av-visually-hidden">@block.Description</span>
+                            </div>
+                        }
+                        <span class="av-timegrid__size av-to-@grid.Rows" aria-hidden="true"></span>
+                    </div>
+                    @if (day.Listed.Count > 0)
+                    {
+                        <ul class="av-timegrid__list" aria-hidden="true">
+                            @foreach (TimegridItem item in day.Listed)
+                            {
+                                <li class="av-timegrid__item av-timegrid__item--@item.Kind">@item.Text</li>
+                            }
+                        </ul>
+                    }
+                </section>
+            }
+        </div>
+    </div>
+}
+@if (Model.Month is { } month)
+{
+    <div class="av-month">
+        @await Html.PartialAsync("_RangeNav", month.Nav)
+        <table class="av-month__grid">
+            <thead>
+                <tr>
+                    @foreach (MonthWeekday weekday in month.Weekdays)
+                    {
+                        <th class="av-month__weekday" scope="col"><abbr title="@weekday.Full">@weekday.Abbreviation</abbr></th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (MonthWeek week in month.Weeks)
+                {
+                    <tr>
+                        @foreach (MonthDay? day in week.Days)
+                        {
+                            @if (day is null)
+                            {
+                                <td class="av-month__day av-month__day--empty"></td>
+                                continue;
+                            }
+
+                            <td class="av-month__day av-month__day--@day.Kind @(day.IsToday ? "av-month__day--today" : null)">
+                                @if (day.Url is { } url)
+                                {
+                                    <a class="av-month__link" href="@url"><span class="av-month__number" aria-hidden="true">@day.Number</span><span class="av-visually-hidden">@day.Description@if (day.IsToday) {<text>, @Text["Visitor.Today"]</text>}</span></a>
+                                }
+                                else
+                                {
+                                    <span class="av-month__number" aria-hidden="true">@day.Number</span><span class="av-visually-hidden">@day.Description@if (day.IsToday) {<text>, @Text["Visitor.Today"]</text>}</span>
+                                }
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <ul class="av-month__legend" aria-hidden="true">
+            @foreach (MonthKey key in month.Legend)
+            {
+                <li class="av-month__key av-month__key--@key.Kind">@key.Text</li>
+            }
+        </ul>
+    </div>
+}
+@if (Model.Next is { } next)
+{
+    <p class="av-next @(next.Found ? null : "av-next--none")">@next.Text</p>
+}

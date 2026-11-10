@@ -1,0 +1,18 @@
+<Project>
+  <!-- Společná pravidla buildu. Varování = chyba: nic se „nedořeší později", porušení zastaví build. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <!-- Nutné pro IDE0005 (nepoužité usingy) v buildu. -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- XML doc komentáře jsou povinné jen u veřejného kontraktu. Jinde se CS1591 nehlásí. -->
+  <PropertyGroup Condition="'$(MSBuildProjectName)' != 'AvailabilityView.Application'">
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+</Project>

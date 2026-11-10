@@ -1,0 +1,54 @@
+{
+  "source": "production",
+  "apiVersion": "1.26.9.14",
+  "recordedAt": "2026-11-09T14:41:10.8960032+01:00",
+  "endpoint": "Event/GetList",
+  "scenario": "ok",
+  "request": {
+    "EndDate": 1795392000,
+    "StartDate": 1794182400,
+    "Page": 1,
+    "PageSize": 100,
+    "TimeStamp": 1794231670
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "Events": [
+        {
+          "AppointmentId": 27058129,
+          "StartDate": 1794402000,
+          "EndDate": 1794405600,
+          "SourceId": 10173,
+          "Status": "Confirmed"
+        },
+        {
+          "AppointmentId": 27032410,
+          "StartDate": 1794475800,
+          "EndDate": 1794483000,
+          "SourceId": 10448,
+          "Status": "Confirmed"
+        },
+        {
+          "AppointmentId": 27032410,
+          "StartDate": 1794475800,
+          "EndDate": 1794483000,
+          "SourceId": 10448,
+          "Status": "Confirmed"
+        },
+        {
+          "AppointmentId": 27032410,
+          "StartDate": 1794475800,
+          "EndDate": 1794483000,
+          "SourceId": 10448,
+          "Status": "Confirmed"
+        }
+      ],
+      "IsError": false,
+      "ErrorParameter": null,
+      "ErrorMessage": null,
+      "ErrorParameters": [],
+      "ErrorMessages": []
+    }
+  }
+}
